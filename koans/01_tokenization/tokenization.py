@@ -73,7 +73,7 @@ def tokenize_words_spacy(text: str, lang: str = "es") -> List[str]:
 
     Args:
         text: Text to tokenize
-        lang: Language ('es' for español, 'en' for inglés)
+        lang: Language ('es' for Spanish, 'en' for English)
 
     Returns:
         List of tokens
@@ -151,4 +151,5 @@ def remove_punctuation_tokens(tokens: List[str]) -> List[str]:
     # 1. El módulo string tiene una withstante with todos los signos de puntuación
     # 2. Usa una list comprehension for filtrar
     pass
+
 

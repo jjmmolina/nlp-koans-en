@@ -1,4 +1,4 @@
-"""
+﻿"""
 Tests for Koan 04: Named Entity Recognition
 
 Ejecuta with:
@@ -23,7 +23,7 @@ class TestBasicNER:
     """Tests básicos de NER"""
     
     def test_extract_entities_spanish(self):
-        """Test: Extractsr entidades en español"""
+        """Test: Extractsr entidades en Spanish"""
         text = "Juan García trabaja en Google en Madrid"
         result = extract_entities_spacy(text, lang="es")
         
@@ -33,7 +33,7 @@ class TestBasicNER:
         assert all(len(item) == 2 for item in result)
         
     def test_extract_entities_english(self):
-        """Test: Extractsr entidades en inglés"""
+        """Test: Extractsr entidades en English"""
         text = "Steve Jobs founded Apple in California"
         result = extract_entities_spacy(text, lang="en")
         
@@ -54,7 +54,7 @@ class TestEntityTypes:
         assert len(result) >= 1
         
     def test_extract_persons_english(self):
-        """Test: Extractsr personas en inglés"""
+        """Test: Extractsr personas en English"""
         text = "Steve Jobs and Bill Gates are famous"
         result = extract_persons(text, lang="en")
         
@@ -185,3 +185,4 @@ class TestRealWorldExamples:
         result = group_entities_by_type(text, lang="en")
         # Debe tener al menos 2 tipos diferentes
         assert len(result) >= 2
+

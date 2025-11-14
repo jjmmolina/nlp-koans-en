@@ -1,4 +1,4 @@
-"""
+﻿"""
 Koan 08: Transformers - Models de Lenguaje Modernos
 
 Los Transformers son la arquitectura más poderosa actual para NLP.
@@ -206,3 +206,4 @@ def compare_models_performance(
     # TODO: Implement comparación de models
     # Hint: Mide el tiempo de cada model y compara resultados
     pass
+

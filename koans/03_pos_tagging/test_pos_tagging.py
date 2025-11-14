@@ -1,4 +1,4 @@
-"""
+﻿"""
 Tests for Koan 03: POS Tagging
 
 Ejecuta with:
@@ -31,7 +31,7 @@ class TestBasicPOSTagging:
         assert all(len(item) == 2 for item in result)
         
     def test_pos_tag_spacy_spanish(self):
-        """Test: POS tagging with spaCy en español"""
+        """Test: POS tagging with spaCy en Spanish"""
         result = pos_tag_spacy("Python es genial", lang="es")
         
         assert isinstance(result, list)
@@ -40,7 +40,7 @@ class TestBasicPOSTagging:
         assert all(len(item) == 3 for item in result)
         
     def test_pos_tag_spacy_english(self):
-        """Test: POS tagging with spaCy en inglés"""
+        """Test: POS tagging with spaCy en English"""
         result = pos_tag_spacy("Python is awesome", lang="en")
         
         assert isinstance(result, list)
@@ -51,7 +51,7 @@ class TestExtraction:
     """Tests de extracción de POS específicos"""
     
     def test_extract_nouns_spanish(self):
-        """Test: Extractsr sustantivos en español"""
+        """Test: Extractsr sustantivos en Spanish"""
         text = "El gato y el perro juegan en el parque"
         result = extract_nouns(text, lang="es")
         
@@ -61,7 +61,7 @@ class TestExtraction:
         assert "parque" in result
         
     def test_extract_nouns_english(self):
-        """Test: Extractsr sustantivos en inglés"""
+        """Test: Extractsr sustantivos en English"""
         text = "The cat and the dog play"
         result = extract_nouns(text, lang="en")
         
@@ -69,7 +69,7 @@ class TestExtraction:
         assert "dog" in result
         
     def test_extract_verbs_spanish(self):
-        """Test: Extractsr verbos en español"""
+        """Test: Extractsr verbos en Spanish"""
         text = "El gato come y el perro corre"
         result = extract_verbs(text, lang="es")
         
@@ -174,3 +174,4 @@ class TestRealWorldExamples:
         tags = pos_tag_spacy(text, lang="es")
         # Debe identificar Python y JavaScript como nombres propios
         assert any(tag == "PROPN" for _, tag, _ in tags)
+

@@ -1,4 +1,4 @@
-"""
+﻿"""
 Tests for Koan 02: Stemming y Lemmatization
 
 Ejecuta with:
@@ -21,19 +21,19 @@ class TestStemming:
     """Tests de stemming"""
     
     def test_stem_word_porter_english(self):
-        """Test: Stemming with Porter en inglés"""
+        """Test: Stemming with Porter en English"""
         assert stem_word_porter("running") == "run"
         assert stem_word_porter("flies") == "fli"
         assert stem_word_porter("studies") == "studi"
         
     def test_stem_word_snowball_spanish(self):
-        """Test: Stemming with Snowball en español"""
+        """Test: Stemming with Snowball en Spanish"""
         result = stem_word_snowball("corriendo", "spanish")
         assert len(result) > 0
         assert result == "corr" or result == "corriend"  # Puede variar
         
     def test_stem_word_snowball_english(self):
-        """Test: Stemming with Snowball en inglés"""
+        """Test: Stemming with Snowball en English"""
         result = stem_word_snowball("running", "english")
         assert result == "run"
         
@@ -67,7 +67,7 @@ class TestLemmatization:
         assert result == "foot"
         
     def test_lemmatize_with_spacy_spanish(self):
-        """Test: Lemmatization with spaCy en español"""
+        """Test: Lemmatization with spaCy en Spanish"""
         text = "Los gatos están corriendo"
         result = lemmatize_with_spacy(text, lang="es")
         
@@ -77,7 +77,7 @@ class TestLemmatization:
         assert "gato" in result or "el" in result
         
     def test_lemmatize_with_spacy_english(self):
-        """Test: Lemmatization with spaCy en inglés"""
+        """Test: Lemmatization with spaCy en English"""
         text = "The cats are running"
         result = lemmatize_with_spacy(text, lang="en")
         
@@ -132,7 +132,7 @@ class TestRealWorldExamples:
     """Tests with ejemplos reales"""
     
     def test_verb_withjugations_spanish(self):
-        """Test: Conjugaciones verbales en español"""
+        """Test: Conjugaciones verbales en Spanish"""
         verbs = ["corro", "corres", "corre", "corremos", "corren"]
         stems = [stem_word_snowball(v, "spanish") for v in verbs]
         
@@ -147,7 +147,8 @@ class TestRealWorldExamples:
         assert "perro" in result, "Debe withvertir 'perros' a 'perro'"
         
     def test_irregular_verbs(self):
-        """Test: Verbos irregulares en inglés"""
+        """Test: Verbos irregulares en English"""
         # 'was' es pasado de 'be'
         result = lemmatize_word_nltk("was", pos="v")
         assert result == "be" or result == "was"  # Puede variar según el lemmatizer
+

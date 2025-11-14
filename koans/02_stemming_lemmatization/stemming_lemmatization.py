@@ -26,7 +26,7 @@ def stem_word_porter(word: str) -> str:
     """
     Aplica stemming using el algoritmo Porter.
 
-    El Porter Stemmer es el más común for inglés.
+    El Porter Stemmer es el más común for English.
 
     Ejemplo:
         >>> stem_word_porter("running")
@@ -50,7 +50,7 @@ def stem_word_snowball(word: str, language: str = "spanish") -> str:
     """
     Aplica stemming using el algoritmo Snowball.
 
-    Snowball soporta múltiples languages, incluyendo español.
+    Snowball soporta múltiples languages, incluyendo Spanish.
 
     Ejemplo:
         >>> stem_word_snowball("corriendo", "spanish")
@@ -190,4 +190,5 @@ def normalize_text(text: str, method: str = "lemma", language: str = "spanish") 
     # Hint: Usa if/else for elegir entre stemming y lemmatization
     # Cada método requiere un procesamiento diferente del text
     pass
+
 

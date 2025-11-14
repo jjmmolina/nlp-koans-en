@@ -1,4 +1,4 @@
-"""
+﻿"""
 Tests para Koan 08: Transformers
 
 Ejecuta con:
@@ -144,3 +144,4 @@ class TestRealWorldExamples:
         
         result = question_answering(context, question, lang="es")
         assert isinstance(result, dict)
+

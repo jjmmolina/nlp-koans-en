@@ -1,4 +1,4 @@
-"""
+﻿"""
 Tests for Koan 01: Tokenizesción
 
 Ejecuta estos tests with:
@@ -22,20 +22,20 @@ class TestTokenizestionBasics:
     """Tests básicos de tokenización"""
 
     def test_tokenize_words_nltk_spanish(self):
-        """Test: Tokenizesción de words en español with NLTK"""
+        """Test: Tokenizesción de words en Spanish with NLTK"""
         text = "Hola, ¿cómo estás?"
         result = tokenize_words_nltk(text)
 
         assert isinstance(result, list), "Debe retornar una lista"
         assert len(result) > 0, "La lista no debe estar vacía"
         assert "Hola" in result, "Debe withtener la palabra 'Hola'"
-        # NLTK mantiene ¿ pegado a la palabra en español
+        # NLTK mantiene ¿ pegado a la palabra en Spanish
         assert (
             "¿cómo" in result or "cómo" in result
         ), "Debe withtener 'cómo' (with o sin ¿)"
 
     def test_tokenize_words_nltk_english(self):
-        """Test: Tokenizesción de words en inglés with NLTK"""
+        """Test: Tokenizesción de words en English with NLTK"""
         text = "Hello, how are you?"
         result = tokenize_words_nltk(text)
 
@@ -57,7 +57,7 @@ class TestTokenizestionSpacy:
     """Tests de tokenización with spaCy"""
 
     def test_tokenize_words_spacy_spanish(self):
-        """Test: Tokenizesción with spaCy en español"""
+        """Test: Tokenizesción with spaCy en Spanish"""
         text = "El Dr. García ganó 1,000 euros."
         result = tokenize_words_spacy(text, lang="es")
 
@@ -67,7 +67,7 @@ class TestTokenizestionSpacy:
         assert "García" in result
 
     def test_tokenize_words_spacy_english(self):
-        """Test: Tokenizesción with spaCy en inglés"""
+        """Test: Tokenizesción with spaCy en English"""
         text = "I'm learning NLP!"
         result = tokenize_words_spacy(text, lang="en")
 
@@ -156,3 +156,4 @@ class TestRealWorldExamples:
 
         sentences = tokenize_sentences_nltk(text)
         assert len(sentences) >= 3
+
