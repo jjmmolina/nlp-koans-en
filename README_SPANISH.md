@@ -1,4 +1,4 @@
-# 🧠 NLP Koans - Learn Natural Language Processing with TDD
+# 🧠 NLP Koans - Aprende Procesamiento de Lenguaje Natural con TDD
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
 [![pytest](https://img.shields.io/badge/tested%20with-pytest-orange.svg)](https://pytest.org/)
@@ -9,10 +9,10 @@
 
 Un proyecto tutorial tipo **Koan** para aprender **Procesamiento de Lenguaje Natural (NLP)** usando **Test-Driven Development (TDD)** en Python.
 
-## 🎯 What are NLP Koans?
+## 🎯 ¿Qué son los NLP Koans?
 
-Los **Koans** are learning exercises donde:
-1. ✅ Tests **fail initially** 
+Los **Koans** son ejercicios de aprendizaje donde:
+1. ✅ Los tests **fallan inicialmente** 
 2. 🔧 Tú **arreglas el código** para hacerlos pasar
 3. 🎓 **Aprendes** los conceptos de NLP progresivamente
 
