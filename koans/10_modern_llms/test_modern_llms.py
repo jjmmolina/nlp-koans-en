@@ -168,21 +168,21 @@ class TestTokenCost:
 
     def test_calculate_token_cost_different_ratios(self):
         """Test: Completion tokens cuestan más"""
-        # Más tokens de entrada
+        # Más tokens de input
         cost1 = calculate_token_cost(10000, 100, "gpt-4o-mini")
-        # Más tokens de salida
+        # Más tokens de output
         cost2 = calculate_token_cost(100, 10000, "gpt-4o-mini")
 
         assert cost2 > cost1  # Output es más caro
 
 
 class TestLLMComparison:
-    """Tests de comparación de modelos"""
+    """Tests de comparación de models"""
 
     @pytest.mark.expensive
     def test_compare_llm_outputs(self):
         """Test: Comparación de múltiples LLMs"""
-        # Solo usa modelos disponibles
+        # Solo usa models disponibles
         available_models = ["gpt-4o-mini"]
         if os.getenv("ANTHROPIC_API_KEY"):
             available_models.append("claude-3-5-sonnet-20241022")
@@ -212,9 +212,9 @@ class TestErrorHandling:
             assert isinstance(response, str)
 
     def test_safe_llm_call_invalid_model(self):
-        """Test: Modelo inválido retorna None o error manejado"""
+        """Test: Model inválido retorna None o error manejado"""
         response = safe_llm_call(
-            "test", model="modelo-que-no-existe-xyz", max_retries=1
+            "test", model="model-que-no-existe-xyz", max_retries=1
         )
 
         # Debe manejar el error gracefully

@@ -1,9 +1,9 @@
 """
 Koan 06: Sentiment Analysis - Análisis de Sentimientos
 
-El análisis de sentimientos determina si un texto es positivo, negativo o neutral.
+El análisis de sentimientos determina si un text es positivo, negativo o neutral.
 
-Usaremos modelos de Transformers pre-entrenados de Hugging Face.
+Usaremos models de Transformers pre-entrenados de Hugging Face.
 
 Ejemplos:
 - "Me encanta Python!" → POSITIVO
@@ -17,43 +17,43 @@ from typing import Dict, List
 
 def analyze_sentiment_simple(text: str, lang: str = "es") -> Dict:
     """
-    Analiza el sentimiento de un texto usando un modelo pre-entrenado.
+    Analyzes el sentimiento de un text using un model pre-entrenado.
 
-    Ejemplo:
+    Example:
         >>> analyze_sentiment_simple("Me encanta Python!")
         {'label': 'POSITIVE', 'score': 0.9987}
 
     Args:
-        text: Texto a analizar
+        text: Text a analizar
         lang: Idioma ('es' o 'en')
 
     Returns:
-        Diccionario con label y score
+        Dictionary with thebel y score
     """
-    # TODO: Implementa análisis de sentimientos con transformers
-    # Pista: Usa pipeline de transformers para "sentiment-analysis"
+    # TODO: Implement análisis de sentimientos con transformers
+    # Hint: Usa pipeline de transformers para "sentiment-analysis"
     # Consulta HINTS.md para más detalles
     pass
 
 
 def analyze_sentiment_batch(texts: List[str], lang: str = "es") -> List[Dict]:
     """
-    Analiza el sentimiento de múltiples textos.
+    Analyzes el sentimiento de múltiples texts.
 
-    Ejemplo:
+    Example:
         >>> texts = ["Me gusta", "No me gusta"]
         >>> analyze_sentiment_batch(texts)
         [{'label': 'POSITIVE', ...}, {'label': 'NEGATIVE', ...}]
 
     Args:
-        texts: Lista de textos
+        texts: List of texts
         lang: Idioma
 
     Returns:
-        Lista de resultados
+        List of resultados
     """
-    # TODO: Procesa múltiples textos
-    # Pista: Los pipelines pueden procesar listas de textos
+    # TODO: Procesa múltiples texts
+    # Hint: Los pipelines pueden procesar listas de texts
     pass
 
 
@@ -61,18 +61,18 @@ def get_sentiment_label(text: str, lang: str = "es") -> str:
     """
     Retorna solo la etiqueta del sentimiento (sin score).
 
-    Ejemplo:
+    Example:
         >>> get_sentiment_label("Excelente producto")
         'POSITIVE'
 
     Args:
-        text: Texto a analizar
+        text: Text a analizar
         lang: Idioma
 
     Returns:
         Etiqueta de sentimiento
     """
-    # TODO: Usa la función anterior y extrae solo el label
+    # TODO: Use la función anterior y extrae solo el label
     pass
 
 
@@ -80,66 +80,66 @@ def get_sentiment_score(text: str, lang: str = "es") -> float:
     """
     Retorna solo el score de confianza del sentimiento.
 
-    Ejemplo:
+    Example:
         >>> get_sentiment_score("Me encanta!")
         0.9987
 
     Args:
-        text: Texto a analizar
+        text: Text a analizar
         lang: Idioma
 
     Returns:
         Score de confianza (0-1)
     """
-    # TODO: Extrae solo el score
+    # TODO: Extracts solo el score
     pass
 
 
 def classify_sentiment_simple(text: str) -> str:
     """
-    Clasifica sentimiento en categorías simples: positivo, negativo, neutral.
+    Classifies sentimiento en categories simples: positivo, negativo, neutral.
 
-    Ejemplo:
+    Example:
         >>> classify_sentiment_simple("Me gusta Python")
         'positivo'
 
     Args:
-        text: Texto a analizar
+        text: Text a analizar
 
     Returns:
         'positivo', 'negativo', o 'neutral'
     """
-    # TODO: Implementa clasificación simple
-    # Mapea los resultados a categorías en español
+    # TODO: Implement clasificación simple
+    # Mapea los resultados a categories en español
     pass
 
 
 def analyze_text_emotions(text: str) -> Dict[str, float]:
     """
-    Analiza emociones específicas en el texto.
+    Analyzes emociones específicas en el text.
 
     Puede detectar: alegría, tristeza, enojo, miedo, sorpresa.
 
-    Ejemplo:
+    Example:
         >>> analyze_text_emotions("Estoy muy feliz!")
         {'joy': 0.95, 'sadness': 0.01, ...}
 
     Args:
-        text: Texto a analizar
+        text: Text a analizar
 
     Returns:
-        Diccionario con emociones y scores
+        Dictionary con emociones y scores
     """
-    # TODO: Implementa análisis de emociones
-    # Pista: Necesitas un modelo específico de emociones
+    # TODO: Implement análisis de emociones
+    # Hint: Necesitas un model específico de emociones
     pass
 
 
 def sentiment_statistics(texts: List[str]) -> Dict:
     """
-    Calcula estadísticas de sentimiento sobre múltiples textos.
+    Calculates estadísticas de sentimiento sobre múltiples texts.
 
-    Ejemplo:
+    Example:
         >>> texts = ["Me gusta", "Odio esto", "Es normal"]
         >>> sentiment_statistics(texts)
         {
@@ -151,11 +151,11 @@ def sentiment_statistics(texts: List[str]) -> Dict:
         }
 
     Args:
-        texts: Lista de textos
+        texts: List of texts
 
     Returns:
-        Diccionario con estadísticas
+        Dictionary con estadísticas
     """
-    # TODO: Calcula estadísticas agregadas
-    # Analiza todos los textos y cuenta por categoría
+    # TODO: Calculates estadísticas agregadas
+    # Analyzes todos los texts y cuenta por categoría
     pass

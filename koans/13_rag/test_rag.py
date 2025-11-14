@@ -1,5 +1,5 @@
 """
-Tests for Koan 13: RAG (Retrieval-Augmented Generation)
+Tests for Koan 13: RAG (Retrieval-Augmented Generatestion)
 """
 
 import pytest

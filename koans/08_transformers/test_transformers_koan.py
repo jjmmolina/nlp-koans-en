@@ -4,7 +4,7 @@ Tests para Koan 08: Transformers
 Ejecuta con:
     pytest koans/08_transformers/test_transformers_koan.py -v
 
-NOTA: Estos tests descargan modelos grandes. Pueden tardar la primera vez.
+NOTA: Estos tests descargan models grandes. Pueden tardar la primera vez.
 Marca algunos como @pytest.mark.slow
 """
 
@@ -27,7 +27,7 @@ class TestPipelineLoading:
     """Tests de carga de pipelines"""
     
     def test_load_pretrained_pipeline(self):
-        """Test: Cargar pipeline pre-entrenado"""
+        """Test: Loadsr pipeline pre-entrenado"""
         pipe = load_pretrained_pipeline("sentiment-analysis")
         
         assert pipe is not None
@@ -38,7 +38,7 @@ class TestBERT:
     """Tests de BERT"""
     
     def test_extract_features_bert(self):
-        """Test: Extraer características con BERT"""
+        """Test: Extractsr características con BERT"""
         features = extract_features_bert("Python es genial")
         
         assert isinstance(features, torch.Tensor)
@@ -78,7 +78,7 @@ class TestZeroShot:
     """Tests de zero-shot classification"""
     
     def test_zero_shot_classification(self):
-        """Test: Clasificación zero-shot"""
+        """Test: Classifiesción zero-shot"""
         text = "Este código tiene un bug"
         labels = ["problema", "éxito", "neutral"]
         
@@ -89,10 +89,10 @@ class TestZeroShot:
 
 @pytest.mark.slow
 class TestSummarization:
-    """Tests de resumen de texto"""
+    """Tests de resumen de text"""
     
     def test_summarize_text(self):
-        """Test: Resumir texto"""
+        """Test: Resumir text"""
         text = """
         Python is a high-level, interpreted programming language.
         It was created by Guido van Rossum and first released in 1991.
@@ -111,17 +111,17 @@ class TestTranslation:
     """Tests de traducción"""
     
     def test_translate_text(self):
-        """Test: Traducir texto"""
+        """Test: Traducir text"""
         result = translate_text("Hola mundo", source_lang="es", target_lang="en")
         
         assert isinstance(result, str)
 
 
 class TestModelComparison:
-    """Tests de comparación de modelos"""
+    """Tests de comparación de models"""
     
     def test_compare_models_performance(self):
-        """Test: Comparar rendimiento de modelos"""
+        """Test: Comparar rendimiento de models"""
         text = "Me encanta Python"
         models = []  # Dejar vacío para evitar descargas en tests rápidos
         

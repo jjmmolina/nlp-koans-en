@@ -1,7 +1,7 @@
 """
-Tests para Koan 03: POS Tagging
+Tests for Koan 03: POS Tagging
 
-Ejecuta con:
+Ejecuta with:
     pytest koans/03_pos_tagging/test_pos_tagging.py -v
 """
 
@@ -22,7 +22,7 @@ class TestBasicPOSTagging:
     """Tests básicos de POS tagging"""
     
     def test_pos_tag_nltk_english(self):
-        """Test: POS tagging con NLTK"""
+        """Test: POS tagging with NLTK"""
         result = pos_tag_nltk("Python is awesome")
         
         assert isinstance(result, list)
@@ -31,7 +31,7 @@ class TestBasicPOSTagging:
         assert all(len(item) == 2 for item in result)
         
     def test_pos_tag_spacy_spanish(self):
-        """Test: POS tagging con spaCy en español"""
+        """Test: POS tagging with spaCy en español"""
         result = pos_tag_spacy("Python es genial", lang="es")
         
         assert isinstance(result, list)
@@ -40,7 +40,7 @@ class TestBasicPOSTagging:
         assert all(len(item) == 3 for item in result)
         
     def test_pos_tag_spacy_english(self):
-        """Test: POS tagging con spaCy en inglés"""
+        """Test: POS tagging with spaCy en inglés"""
         result = pos_tag_spacy("Python is awesome", lang="en")
         
         assert isinstance(result, list)
@@ -51,7 +51,7 @@ class TestExtraction:
     """Tests de extracción de POS específicos"""
     
     def test_extract_nouns_spanish(self):
-        """Test: Extraer sustantivos en español"""
+        """Test: Extractsr sustantivos en español"""
         text = "El gato y el perro juegan en el parque"
         result = extract_nouns(text, lang="es")
         
@@ -61,7 +61,7 @@ class TestExtraction:
         assert "parque" in result
         
     def test_extract_nouns_english(self):
-        """Test: Extraer sustantivos en inglés"""
+        """Test: Extractsr sustantivos en inglés"""
         text = "The cat and the dog play"
         result = extract_nouns(text, lang="en")
         
@@ -69,7 +69,7 @@ class TestExtraction:
         assert "dog" in result
         
     def test_extract_verbs_spanish(self):
-        """Test: Extraer verbos en español"""
+        """Test: Extractsr verbos en español"""
         text = "El gato come y el perro corre"
         result = extract_verbs(text, lang="es")
         
@@ -78,7 +78,7 @@ class TestExtraction:
         assert any("corre" in v or "correr" in v for v in result)
         
     def test_extract_adjectives_spanish(self):
-        """Test: Extraer adjetivos"""
+        """Test: Extractsr adjetivos"""
         text = "El gato negro es muy rápido"
         result = extract_adjectives(text, lang="es")
         
@@ -104,7 +104,7 @@ class TestStatistics:
         text = "perro gato pájaro"  # 3 sustantivos
         result = get_pos_statistics(text, lang="es")
         
-        # Debe contar 3 sustantivos
+        # Debe withtar 3 sustantivos
         assert result.get("NOUN", 0) + result.get("PROPN", 0) >= 3
 
 
@@ -112,17 +112,17 @@ class TestNounPhrases:
     """Tests de frases nominales"""
     
     def test_find_noun_phrases_spanish(self):
-        """Test: Encontrar frases nominales"""
+        """Test: Enwithtrar frases nominales"""
         text = "El gato negro duerme en la cama grande"
         result = find_noun_phrases(text, lang="es")
         
         assert isinstance(result, list)
         assert len(result) > 0
-        # Debe contener al menos una frase nominal
+        # Debe withtener al menos una frase nominal
         assert any("gato" in phrase.lower() for phrase in result)
         
     def test_noun_phrases_not_empty(self):
-        """Test: Texto con sustantivos debe retornar frases"""
+        """Test: Text with sustantivos debe retornar frases"""
         text = "Python es un lenguaje de programación"
         result = find_noun_phrases(text, lang="es")
         
@@ -138,21 +138,21 @@ class TestPatternMatching:
         result = pos_pattern_match(text, ["ADJ", "NOUN"], lang="es")
         
         assert isinstance(result, list)
-        # Debe encontrar al menos un patrón
+        # Debe enwithtrar al menos un patrón
         assert len(result) >= 0  # Puede variar según implementación
         
     def test_pos_pattern_match_empty_pattern(self):
         """Test: Patrón vacío debe retornar lista vacía"""
-        result = pos_pattern_match("Texto cualquiera", [], lang="es")
+        result = pos_pattern_match("Text cualquiera", [], lang="es")
         assert result == []
 
 
 class TestRealWorldExamples:
-    """Tests con ejemplos reales"""
+    """Tests with ejemplos reales"""
     
     def test_news_headline(self):
-        """Test: Analizar titular de noticia"""
-        headline = "El presidente anuncia nuevas medidas económicas"
+        """Test: Analyzesr titular de noticia"""
+        headline = "El presidente anuncia nuevas medidas ewithómicas"
         
         nouns = extract_nouns(headline, lang="es")
         verbs = extract_verbs(headline, lang="es")
@@ -161,14 +161,14 @@ class TestRealWorldExamples:
         assert len(verbs) >= 1  # anuncia
         
     def test_product_description(self):
-        """Test: Analizar descripción de producto"""
-        description = "Smartphone moderno con cámara potente y batería duradera"
+        """Test: Analyzesr descripción de producto"""
+        description = "Smartphone moderno with cámara potente y batería duradera"
         
         adjectives = extract_adjectives(description, lang="es")
         assert len(adjectives) >= 2  # moderno, potente, duradera
         
     def test_technical_text(self):
-        """Test: Texto técnico con nombres propios"""
+        """Test: Text técnico with nombres propios"""
         text = "Python y JavaScript son lenguajes de programación populares"
         
         tags = pos_tag_spacy(text, lang="es")

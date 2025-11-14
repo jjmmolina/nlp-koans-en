@@ -19,7 +19,7 @@ from word_embeddings import (
 
 
 class TestVectorExtraction:
-    """Tests de extracción de vectores"""
+    """Tests de extracción de vectors"""
     
     def test_get_word_vector_spacy(self):
         """Test: Obtener vector de palabra"""
@@ -29,7 +29,7 @@ class TestVectorExtraction:
         assert len(vector) > 0
         
     def test_get_text_vector_spacy(self):
-        """Test: Obtener vector de texto"""
+        """Test: Obtener vector de text"""
         vector = get_text_vector_spacy("me gusta python", lang="es")
         
         assert isinstance(vector, np.ndarray)
@@ -40,7 +40,7 @@ class TestSimilarity:
     """Tests de similitud"""
     
     def test_cosine_similarity_words(self):
-        """Test: Similitud entre palabras"""
+        """Test: Similitud entre words"""
         similarity = cosine_similarity_words("gato", "perro", lang="es")
         
         assert isinstance(similarity, float)
@@ -53,7 +53,7 @@ class TestSimilarity:
         # gato y coche no están relacionados
         sim_unrelated = cosine_similarity_words("gato", "coche", lang="es")
         
-        # Esta comparación puede variar según el modelo
+        # Esta comparación puede variar según el model
         assert isinstance(sim_animals, float)
         assert isinstance(sim_unrelated, float)
 
@@ -62,7 +62,7 @@ class TestMostSimilar:
     """Tests de búsqueda de similares"""
     
     def test_find_most_similar(self):
-        """Test: Encontrar palabras más similares"""
+        """Test: Encontrar words más similares"""
         result = find_most_similar("perro", ["gato", "coche", "manzana"], lang="es")
         
         assert isinstance(result, list)
@@ -89,10 +89,10 @@ class TestAnalogy:
 
 
 class TestDocumentSimilarity:
-    """Tests de similitud de documentos"""
+    """Tests de similitud de documents"""
     
     def test_get_document_similarity(self):
-        """Test: Similitud entre documentos"""
+        """Test: Similitud entre documents"""
         text1 = "Me gusta programar en Python"
         text2 = "Python es mi lenguaje favorito"
         
@@ -114,7 +114,7 @@ class TestClustering:
     """Tests de clustering"""
     
     def test_cluster_words_by_similarity(self):
-        """Test: Agrupar palabras similares"""
+        """Test: Agrupar words similares"""
         words = ["perro", "gato", "coche", "auto"]
         result = cluster_words_by_similarity(words, threshold=0.5, lang="es")
         

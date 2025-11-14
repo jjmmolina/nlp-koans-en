@@ -24,16 +24,16 @@ class TestFeatureExtraction:
     """Tests de extracción de características"""
     
     def test_create_tfidf_features(self):
-        """Test: Crear características TF-IDF"""
+        """Test: Createsr características TF-IDF"""
         texts = ["Python es genial", "Java es genial", "Python es mejor"]
         vectorizer, features = create_tfidf_features(texts, max_features=10)
         
         assert vectorizer is not None
         assert features is not None
-        assert features.shape[0] == 3  # 3 documentos
+        assert features.shape[0] == 3  # 3 documents
         
     def test_create_bow_features(self):
-        """Test: Crear características Bag of Words"""
+        """Test: Createsr características Bag of Words"""
         texts = ["hola mundo", "hola Python", "mundo Python"]
         vectorizer, features = create_bow_features(texts, max_features=10)
         
@@ -46,7 +46,7 @@ class TestClassifierTraining:
     """Tests de entrenamiento de clasificadores"""
     
     def test_train_naive_bayes_classifier(self):
-        """Test: Entrenar Naive Bayes"""
+        """Test: Trainsr Naive Bayes"""
         texts = ["spam gratis", "reunión mañana", "premio gratis", "proyecto python"]
         labels = [1, 0, 1, 0]
         
@@ -56,7 +56,7 @@ class TestClassifierTraining:
         assert clf is not None
         
     def test_train_logistic_regression_classifier(self):
-        """Test: Entrenar Regresión Logística"""
+        """Test: Trainsr Regresión Logística"""
         texts = ["spam gratis", "reunión mañana", "premio gratis", "proyecto python"]
         labels = [1, 0, 1, 0]
         
@@ -70,7 +70,7 @@ class TestPrediction:
     """Tests de predicción"""
     
     def test_predict_class(self):
-        """Test: Predecir clase de texto"""
+        """Test: Predecir clase de text"""
         # Datos de entrenamiento simples
         texts = [
             "gratis premio dinero",
@@ -83,7 +83,7 @@ class TestPrediction:
         vectorizer, X = create_tfidf_features(texts)
         clf = train_naive_bayes_classifier(X, labels)
         
-        # Predecir nuevo texto
+        # Predecir nuevo text
         result = predict_class(clf, vectorizer, "gratis oferta")
         
         assert result in [0, 1]
@@ -126,7 +126,7 @@ class TestFeatureImportance:
     """Tests de importancia de características"""
     
     def test_get_top_features(self):
-        """Test: Obtener palabras más importantes"""
+        """Test: Obtener words más importantes"""
         texts = [
             "python código programación",
             "java código desarrollo",
@@ -152,7 +152,7 @@ class TestSpamClassifier:
             "Gana dinero rápido!",
             "Reunión de equipo mañana",
             "Oferta especial gratis!",
-            "Agenda para el proyecto",
+            "Agenda for the proyecto",
             "Click aquí premio gratis",
             "Código Python para revisar"
         ]
@@ -164,7 +164,7 @@ class TestSpamClassifier:
         assert vectorizer is not None
         
     def test_spam_classifier_prediction(self):
-        """Test: Clasificador de spam predice correctamente"""
+        """Test: Classifiesdor de spam predice correctamente"""
         emails = [
             "premio gratis dinero",
             "proyecto desarrollo",
@@ -186,7 +186,7 @@ class TestRealWorldExamples:
     """Tests con ejemplos del mundo real"""
     
     def test_news_classification(self):
-        """Test: Clasificar categorías de noticias"""
+        """Test: Classifiesr categories de noticias"""
         news = [
             "Gol en el minuto 90 del partido",
             "Nueva ley aprobada en el congreso",
@@ -203,7 +203,7 @@ class TestRealWorldExamples:
         assert result in [0, 1]
         
     def test_sentiment_binary_classification(self):
-        """Test: Clasificación binaria de sentimiento"""
+        """Test: Classifiesción binaria de sentimiento"""
         reviews = [
             "Excelente producto, muy bueno",
             "Terrible, muy malo",

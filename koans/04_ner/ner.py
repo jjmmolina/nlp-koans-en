@@ -1,7 +1,7 @@
 """
-Koan 04: Named Entity Recognition (NER) - Reconocimiento de Entidades Nombradas
+Koan 04: Named Entity Recognition (NER) - Rewithocimiento de Entidades Nombradas
 
-NER identifica y clasifica entidades en el texto:
+NER identifica y clasifica entidades en el text:
 - Personas (PER): "Juan García"
 - Organizaciones (ORG): "Google", "ONU"
 - Lugares (LOC): "Madrid", "España"
@@ -9,7 +9,7 @@ NER identifica y clasifica entidades en el texto:
 - Cantidades de dinero (MONEY)
 - etc.
 
-Librería principal: spaCy (excelente para NER multiidioma)
+Librería principal: spaCy (excelente for NER multilanguage)
 """
 
 import spacy
@@ -18,62 +18,62 @@ from typing import List, Dict, Tuple
 
 def extract_entities_spacy(text: str, lang: str = "es") -> List[Tuple[str, str]]:
     """
-    Extrae todas las entidades nombradas de un texto.
+    Extracts todas las entidades nombradas de un text.
 
     Ejemplo:
         >>> extract_entities_spacy("Steve Jobs fundó Apple en California")
         [('Steve Jobs', 'PER'), ('Apple', 'ORG'), ('California', 'LOC')]
 
     Args:
-        text: Texto a analizar
+        text: Text a analizar
         lang: Idioma ('es' o 'en')
 
     Returns:
-        Lista de tuplas (entidad, tipo)
+        List of tuplas (entidad, tipo)
     """
-    # TODO: Implementa extracción de entidades con spaCy
+    # TODO: Implement extracción de entidades with spaCy
     # Pistas:
     # 1. Carga el modelo spaCy apropiado
-    # 2. Procesa el texto
-    # 3. Los documentos procesados tienen un atributo .ents con las entidades
-    # Consulta HINTS.md para más ayuda
+    # 2. Procesa el text
+    # 3. Los documentos procesados tienen un atributo .ents with las entidades
+    # Consulta HINTS.md for más ayuda
     pass
 
 
 def extract_persons(text: str, lang: str = "es") -> List[str]:
     """
-    Extrae solo nombres de personas.
+    Extracts solo nombres de personas.
 
     Ejemplo:
         >>> extract_persons("Juan y María trabajan en Google")
         ['Juan', 'María']
 
     Args:
-        text: Texto a analizar
+        text: Text a analizar
         lang: Idioma
 
     Returns:
-        Lista de nombres de personas
+        List of nombres de personas
     """
     # TODO: Filtra entidades de tipo PERSONA
-    # Pista: Primero extrae todas las entidades, luego filtra por tipo
+    # Hint: Primero extrae todas las entidades, luego filtra por tipo
     pass
 
 
 def extract_organizations(text: str, lang: str = "es") -> List[str]:
     """
-    Extrae nombres de organizaciones.
+    Extracts nombres de organizaciones.
 
     Ejemplo:
         >>> extract_organizations("Google y Microsoft son grandes empresas")
         ['Google', 'Microsoft']
 
     Args:
-        text: Texto a analizar
+        text: Text a analizar
         lang: Idioma
 
     Returns:
-        Lista de organizaciones
+        List of organizaciones
     """
     # TODO: Filtra entidades de tipo ORGANIZACIÓN
     pass
@@ -81,18 +81,18 @@ def extract_organizations(text: str, lang: str = "es") -> List[str]:
 
 def extract_locations(text: str, lang: str = "es") -> List[str]:
     """
-    Extrae nombres de lugares.
+    Extracts nombres de lugares.
 
     Ejemplo:
         >>> extract_locations("Viajé de Madrid a Barcelona")
         ['Madrid', 'Barcelona']
 
     Args:
-        text: Texto a analizar
+        text: Text a analizar
         lang: Idioma
 
     Returns:
-        Lista de lugares
+        List of lugares
     """
     # TODO: Filtra entidades de tipo LUGAR
     # Nota: Puede ser 'LOC' o 'GPE' dependiendo del modelo
@@ -101,18 +101,18 @@ def extract_locations(text: str, lang: str = "es") -> List[str]:
 
 def extract_dates(text: str, lang: str = "es") -> List[str]:
     """
-    Extrae expresiones de fecha y tiempo.
+    Extracts expresiones de fecha y tiempo.
 
     Ejemplo:
         >>> extract_dates("El 15 de enero de 2024 fue un día importante")
         ['15 de enero de 2024']
 
     Args:
-        text: Texto a analizar
+        text: Text a analizar
         lang: Idioma
 
     Returns:
-        Lista de expresiones temporales
+        List of expresiones temporales
     """
     # TODO: Filtra entidades de tipo FECHA/TIEMPO
     pass
@@ -131,14 +131,14 @@ def group_entities_by_type(text: str, lang: str = "es") -> Dict[str, List[str]]:
         }
 
     Args:
-        text: Texto a analizar
+        text: Text a analizar
         lang: Idioma
 
     Returns:
-        Diccionario con entidades agrupadas por tipo
+        Diccionario with entidades agrupadas por tipo
     """
-    # TODO: Implementa agrupación de entidades
-    # Pista: Recorre las entidades y agrúpalas por su label_
+    # TODO: Implement agrupación de entidades
+    # Hint: Recorre las entidades y agrúpalas por su label_
     pass
 
 
@@ -151,43 +151,43 @@ def count_entity_types(text: str, lang: str = "es") -> Dict[str, int]:
         {'PER': 2, 'ORG': 2}
 
     Args:
-        text: Texto a analizar
+        text: Text a analizar
         lang: Idioma
 
     Returns:
-        Diccionario con conteo por tipo
+        Diccionario with withteo por tipo
     """
     # TODO: Cuenta las entidades por tipo
-    # Pista: Similar a group_entities_by_type pero solo cuentas
+    # Hint: Similar a group_entities_by_type pero solo cuentas
     pass
 
 
-def find_entity_context(
+def find_entity_withtext(
     text: str, entity: str, window: int = 5, lang: str = "es"
 ) -> str:
     """
-    Encuentra el contexto alrededor de una entidad específica.
+    Encuentra el withtext alrededor de una entidad específica.
 
-    Retorna las N palabras antes y después de la entidad.
+    Retorna las N words antes y después de la entidad.
 
     Ejemplo:
-        >>> find_entity_context("Juan García trabaja en Google desde 2020", "Google", window=2)
+        >>> find_entity_withtext("Juan García trabaja en Google desde 2020", "Google", window=2)
         'en Google desde'
 
     Args:
-        text: Texto a analizar
+        text: Text a analizar
         entity: Entidad a buscar
-        window: Número de palabras de contexto (antes y después)
+        window: Número de words de withtext (antes y después)
         lang: Idioma
 
     Returns:
-        Contexto de la entidad
+        Context de la entidad
     """
-    # TODO: Implementa extracción de contexto
+    # TODO: Implement extracción de withtext
     # Pistas:
-    # 1. Procesa el texto con spaCy
+    # 1. Procesa el text with spaCy
     # 2. Busca la entidad específica en doc.ents
-    # 3. Obtén los tokens alrededor usando índices de span
+    # 3. Obtén los tokens alrededor using índices de span
     pass
 
 
@@ -195,19 +195,19 @@ def visualize_entities(text: str, lang: str = "es") -> str:
     """
     Crea una representación visual de las entidades (simplificada).
 
-    Marca las entidades con corchetes y su tipo.
+    Marca las entidades with corchetes y su tipo.
 
     Ejemplo:
         >>> visualize_entities("Juan trabaja en Google")
         '[PER: Juan] trabaja en [ORG: Google]'
 
     Args:
-        text: Texto a analizar
+        text: Text a analizar
         lang: Idioma
 
     Returns:
-        Texto con entidades marcadas
+        Text with entidades marcadas
     """
-    # TODO: Implementa visualización simple
-    # Pista: Construye un nuevo string insertando marcadores alrededor de las entidades
+    # TODO: Implement visualización simple
+    # Hint: Construye un nuevo string insertando marcadores alrededor de las entidades
     pass

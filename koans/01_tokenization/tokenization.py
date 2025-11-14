@@ -1,8 +1,8 @@
 """
-Koan 01: Tokenización - Dividiendo el Texto en Unidades
+Koan 01: Tokenizesción - Dividiendo el Text en Unidades
 
-La tokenización es el proceso de dividir texto en unidades más pequeñas (tokens),
-que pueden ser palabras, oraciones, o incluso caracteres.
+La tokenización es el proceso de dividir text en unidades más pequeñas (tokens),
+que pueden ser words, sentences, o incluso caracteres.
 
 Este es el primer paso fundamental en casi cualquier pipeline de NLP.
 
@@ -23,27 +23,27 @@ from nltk.tokenize import word_tokenize, sent_tokenize
 
 def tokenize_words_nltk(text: str) -> List[str]:
     """
-    Tokeniza un texto en palabras usando NLTK.
+    Tokenizes un text en words using NLTK.
 
     Ejemplo:
         >>> tokenize_words_nltk("Hola, ¿cómo estás?")
         ['Hola', ',', '¿', 'cómo', 'estás', '?']
 
     Args:
-        text: Texto a tokenizar
+        text: Text a tokenizar
 
     Returns:
-        Lista de tokens (palabras y signos de puntuación)
+        List of tokens (words y signos de puntuación)
     """
-    # TODO: Implementa la tokenización de palabras
-    # Pista: Necesitas usar la función word_tokenize que ya está importada arriba
+    # TODO: Implement la tokenización de words
+    # Hint: Necesitas usar la función word_tokenize que ya está importada arriba
     # ¿Qué debes retornar?
     pass
 
 
 def tokenize_sentences_nltk(text: str) -> List[str]:
     """
-    Tokeniza un texto en oraciones usando NLTK.
+    Tokenizes un text en sentences using NLTK.
 
     Ejemplo:
         >>> text = "Hola mundo. ¿Cómo estás? Yo estoy bien."
@@ -51,19 +51,19 @@ def tokenize_sentences_nltk(text: str) -> List[str]:
         ['Hola mundo.', '¿Cómo estás?', 'Yo estoy bien.']
 
     Args:
-        text: Texto a tokenizar
+        text: Text a tokenizar
 
     Returns:
-        Lista de oraciones
+        List of sentences
     """
-    # TODO: Implementa la tokenización de oraciones
-    # Pista: Similar a word_tokenize, pero para oraciones. Ya está importada arriba.
+    # TODO: Implement la tokenización de sentences
+    # Hint: Similar a word_tokenize, pero for sentences. Ya está importada arriba.
     pass
 
 
 def tokenize_words_spacy(text: str, lang: str = "es") -> List[str]:
     """
-    Tokeniza un texto en palabras usando spaCy.
+    Tokenizes un text en words using spaCy.
 
     spaCy es más sofisticado que NLTK y maneja mejor casos especiales.
 
@@ -72,25 +72,25 @@ def tokenize_words_spacy(text: str, lang: str = "es") -> List[str]:
         ['Dr.', 'Smith', 'ganó', '$', '1,000', 'dólares', '.']
 
     Args:
-        text: Texto a tokenizar
-        lang: Idioma ('es' para español, 'en' para inglés)
+        text: Text a tokenizar
+        lang: Idioma ('es' for español, 'en' for inglés)
 
     Returns:
-        Lista de tokens
+        List of tokens
     """
-    # TODO: Implementa la tokenización con spaCy
+    # TODO: Implement la tokenización with spaCy
     # Pistas:
     # 1. Importa spacy
-    # 2. Carga el modelo correcto según el idioma
-    # 3. Procesa el texto con el modelo
-    # 4. Extrae los tokens (cada token tiene un atributo .text)
+    # 2. Carga el modelo correcto según el language
+    # 3. Procesa el text with el modelo
+    # 4. Extracts los tokens (cada token tiene un atributo .text)
     # Consulta HINTS.md si necesitas más ayuda
     pass
 
 
 def custom_tokenize(text: str, delimiter: str = " ") -> List[str]:
     """
-    Tokenización simple usando un delimitador.
+    Tokenizesción simple using un delimiter.
 
     A veces una simple división es suficiente.
 
@@ -99,55 +99,55 @@ def custom_tokenize(text: str, delimiter: str = " ") -> List[str]:
         ['Hola', 'mundo', 'Python']
 
     Args:
-        text: Texto a tokenizar
-        delimiter: Delimitador para separar tokens
+        text: Text a tokenizar
+        delimiter: Delimitador for seforr tokens
 
     Returns:
-        Lista de tokens
+        List of tokens
     """
-    # TODO: Implementa una tokenización simple
-    # Pista: Los strings en Python tienen un método que divide por un delimitador
+    # TODO: Implement una tokenización simple
+    # Hint: Los strings en Python tienen un método que divide por un delimiter
     pass
 
 
 def count_tokens(text: str) -> dict:
     """
-    Cuenta la frecuencia de cada token en un texto.
+    Cuenta la frecuencia de cada token en un text.
 
     Ejemplo:
         >>> count_tokens("el gato y el perro")
         {'el': 2, 'gato': 1, 'y': 1, 'perro': 1}
 
     Args:
-        text: Texto a analizar
+        text: Text a analizar
 
     Returns:
-        Diccionario con frecuencias de tokens
+        Diccionario with frecuencias de tokens
     """
-    # TODO: Implementa el conteo de tokens
+    # TODO: Implement el withteo de tokens
     # Pistas:
-    # 1. Primero tokeniza el texto (puedes usar una función que ya creaste)
-    # 2. Normaliza a minúsculas
+    # 1. Primero tokeniza el text (puedes usar una función que ya creaste)
+    # 2. Normalizes a minúsculas
     # 3. Cuenta las frecuencias (mira collections.Counter o usa un dict)
     pass
 
 
 def remove_punctuation_tokens(tokens: List[str]) -> List[str]:
     """
-    Elimina signos de puntuación de una lista de tokens.
+    Elimina signos de puntuación de una list of tokens.
 
     Ejemplo:
         >>> remove_punctuation_tokens(['Hola', ',', 'mundo', '!'])
         ['Hola', 'mundo']
 
     Args:
-        tokens: Lista de tokens
+        tokens: List of tokens
 
     Returns:
-        Lista de tokens sin puntuación
+        List of tokens sin puntuación
     """
     # TODO: Filtra los tokens que NO sean puntuación
     # Pistas:
-    # 1. El módulo string tiene una constante con todos los signos de puntuación
-    # 2. Usa una list comprehension para filtrar
+    # 1. El módulo string tiene una withstante with todos los signos de puntuación
+    # 2. Usa una list comprehension for filtrar
     pass

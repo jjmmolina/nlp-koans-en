@@ -4,7 +4,7 @@ Tests para Koan 06: Sentiment Analysis
 Ejecuta con:
     pytest koans/06_sentiment_analysis/test_sentiment_analysis.py -v
     
-NOTA: Estos tests requieren descargar modelos (pueden tardar la primera vez)
+NOTA: Estos tests requieren descargar models (pueden tardar la primera vez)
 """
 
 import pytest
@@ -24,14 +24,14 @@ class TestBasicSentiment:
     """Tests básicos de análisis de sentimientos"""
     
     def test_analyze_sentiment_simple_positive(self):
-        """Test: Analizar texto positivo"""
+        """Test: Analyzesr text positivo"""
         result = analyze_sentiment_simple("Me encanta Python, es genial!")
         
         assert isinstance(result, dict)
         assert 'label' in result or 'score' in result
         
     def test_analyze_sentiment_simple_negative(self):
-        """Test: Analizar texto negativo"""
+        """Test: Analyzesr text negativo"""
         result = analyze_sentiment_simple("Odio los bugs, son horribles")
         
         assert isinstance(result, dict)
@@ -42,7 +42,7 @@ class TestBatchProcessing:
     """Tests de procesamiento por lotes"""
     
     def test_analyze_sentiment_batch(self):
-        """Test: Analizar múltiples textos"""
+        """Test: Analyzesr múltiples texts"""
         texts = ["Me gusta", "No me gusta", "Es normal"]
         result = analyze_sentiment_batch(texts)
         
@@ -73,13 +73,13 @@ class TestSimpleClassification:
     """Tests de clasificación simple"""
     
     def test_classify_sentiment_simple_positive(self):
-        """Test: Clasificar como positivo"""
+        """Test: Classifiesr como positivo"""
         result = classify_sentiment_simple("Me gusta mucho Python")
         
         assert result in ['positivo', 'negativo', 'neutral']
         
     def test_classify_sentiment_simple_negative(self):
-        """Test: Clasificar como negativo"""
+        """Test: Classifiesr como negativo"""
         result = classify_sentiment_simple("Odio los errores")
         
         assert result in ['positivo', 'negativo', 'neutral']
@@ -90,7 +90,7 @@ class TestEmotionAnalysis:
     """Tests de análisis de emociones"""
     
     def test_analyze_text_emotions(self):
-        """Test: Analizar emociones"""
+        """Test: Analyzesr emociones"""
         result = analyze_text_emotions("I am very happy!")
         
         assert isinstance(result, dict)
@@ -100,7 +100,7 @@ class TestStatistics:
     """Tests de estadísticas de sentimiento"""
     
     def test_sentiment_statistics(self):
-        """Test: Calcular estadísticas"""
+        """Test: Calculatesr estadísticas"""
         texts = ["Bueno", "Malo", "Normal"]
         result = sentiment_statistics(texts)
         

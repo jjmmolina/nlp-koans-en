@@ -1,7 +1,7 @@
 """
-Tests para Koan 01: Tokenización
+Tests for Koan 01: Tokenizesción
 
-Ejecuta estos tests con:
+Ejecuta estos tests with:
     pytest koans/01_tokenization/test_tokenization.py -v
 
 Los tests fallarán hasta que implementes las funciones en tokenization.py
@@ -18,24 +18,24 @@ from tokenization import (
 )
 
 
-class TestTokenizationBasics:
+class TestTokenizestionBasics:
     """Tests básicos de tokenización"""
 
     def test_tokenize_words_nltk_spanish(self):
-        """Test: Tokenización de palabras en español con NLTK"""
+        """Test: Tokenizesción de words en español with NLTK"""
         text = "Hola, ¿cómo estás?"
         result = tokenize_words_nltk(text)
 
         assert isinstance(result, list), "Debe retornar una lista"
         assert len(result) > 0, "La lista no debe estar vacía"
-        assert "Hola" in result, "Debe contener la palabra 'Hola'"
+        assert "Hola" in result, "Debe withtener la palabra 'Hola'"
         # NLTK mantiene ¿ pegado a la palabra en español
         assert (
             "¿cómo" in result or "cómo" in result
-        ), "Debe contener 'cómo' (con o sin ¿)"
+        ), "Debe withtener 'cómo' (with o sin ¿)"
 
     def test_tokenize_words_nltk_english(self):
-        """Test: Tokenización de palabras en inglés con NLTK"""
+        """Test: Tokenizesción de words en inglés with NLTK"""
         text = "Hello, how are you?"
         result = tokenize_words_nltk(text)
 
@@ -44,20 +44,20 @@ class TestTokenizationBasics:
         assert "?" in result
 
     def test_tokenize_sentences_nltk(self):
-        """Test: Tokenización de oraciones con NLTK"""
+        """Test: Tokenizesción de sentences with NLTK"""
         text = "Hola mundo. ¿Cómo estás? Yo estoy bien."
         result = tokenize_sentences_nltk(text)
 
         assert isinstance(result, list)
-        assert len(result) == 3, "Debe haber exactamente 3 oraciones"
+        assert len(result) == 3, "Debe haber exactamente 3 sentences"
         assert "Hola mundo." in result[0]
 
 
-class TestTokenizationSpacy:
-    """Tests de tokenización con spaCy"""
+class TestTokenizestionSpacy:
+    """Tests de tokenización with spaCy"""
 
     def test_tokenize_words_spacy_spanish(self):
-        """Test: Tokenización con spaCy en español"""
+        """Test: Tokenizesción with spaCy en español"""
         text = "El Dr. García ganó 1,000 euros."
         result = tokenize_words_spacy(text, lang="es")
 
@@ -67,7 +67,7 @@ class TestTokenizationSpacy:
         assert "García" in result
 
     def test_tokenize_words_spacy_english(self):
-        """Test: Tokenización con spaCy en inglés"""
+        """Test: Tokenizesción with spaCy en inglés"""
         text = "I'm learning NLP!"
         result = tokenize_words_spacy(text, lang="en")
 
@@ -75,18 +75,18 @@ class TestTokenizationSpacy:
         assert len(result) > 0
 
 
-class TestCustomTokenization:
+class TestCustomTokenizestion:
     """Tests de tokenización personalizada"""
 
     def test_custom_tokenize_spaces(self):
-        """Test: Tokenización por espacios"""
+        """Test: Tokenizesción por espacios"""
         text = "Hola mundo Python"
         result = custom_tokenize(text, delimiter=" ")
 
         assert result == ["Hola", "mundo", "Python"]
 
     def test_custom_tokenize_custom_delimiter(self):
-        """Test: Tokenización con delimitador personalizado"""
+        """Test: Tokenizesción with delimiter personalizado"""
         text = "rojo-verde-azul"
         result = custom_tokenize(text, delimiter="-")
 
@@ -95,7 +95,7 @@ class TestCustomTokenization:
 
 
 class TestTokenCounting:
-    """Tests de conteo de tokens"""
+    """Tests de withteo de tokens"""
 
     def test_count_tokens_simple(self):
         """Test: Contar frecuencia de tokens"""
@@ -108,11 +108,11 @@ class TestTokenCounting:
         assert result.get("perro") == 1
 
     def test_count_tokens_case_insensitive(self):
-        """Test: El conteo debe ser insensible a mayúsculas"""
+        """Test: El withteo debe ser insensible a mayúsculas"""
         text = "Python python PYTHON"
         result = count_tokens(text)
 
-        # Debe contar como la misma palabra
+        # Debe withtar como la misma palabra
         assert result.get("python") == 3
 
 
@@ -138,10 +138,10 @@ class TestPunctuationRemoval:
 
 
 class TestRealWorldExamples:
-    """Tests con ejemplos del mundo real"""
+    """Tests with ejemplos del mundo real"""
 
     def test_tweet_tokenization(self):
-        """Test: Tokenizar un tweet"""
+        """Test: Tokenizesr un tweet"""
         tweet = "¡Me encanta #Python y #NLP! 🚀"
         tokens = tokenize_words_nltk(tweet)
 
@@ -149,7 +149,7 @@ class TestRealWorldExamples:
         assert any("#Python" in t or "Python" in t for t in tokens)
 
     def test_multiline_text(self):
-        """Test: Texto con múltiples líneas"""
+        """Test: Text with múltiples líneas"""
         text = """Primera línea.
         Segunda línea.
         Tercera línea."""

@@ -1,9 +1,9 @@
 """
-Koan 02: Stemming y Lemmatization - Normalización de Palabras
+Koan 02: Stemming y Lemmatization - Normalizesción de Palabras
 
-Stemming y Lemmatization son técnicas para reducir palabras a su forma base.
+Stemming y Lemmatization son técnicas for reducir words a su forma base.
 
-- Stemming: Corta el final de las palabras (rápido pero tosco)
+- Stemming: Corta el final de las words (rápido pero tosco)
   Ejemplo: "corriendo" → "corr"
 
 - Lemmatization: Usa reglas lingüísticas (preciso pero más lento)
@@ -24,9 +24,9 @@ from typing import List
 
 def stem_word_porter(word: str) -> str:
     """
-    Aplica stemming usando el algoritmo Porter.
+    Aplica stemming using el algoritmo Porter.
 
-    El Porter Stemmer es el más común para inglés.
+    El Porter Stemmer es el más común for inglés.
 
     Ejemplo:
         >>> stem_word_porter("running")
@@ -40,17 +40,17 @@ def stem_word_porter(word: str) -> str:
     Returns:
         Stem de la palabra
     """
-    # TODO: Implementa con PorterStemmer de NLTK
-    # Pista: Necesitas importar la clase y crear una instancia
-    # Consulta HINTS.md para más detalles
+    # TODO: Implement with PorterStemmer de NLTK
+    # Hint: Necesitas importar la clase y crear una instancia
+    # Consulta HINTS.md for más detalles
     pass
 
 
 def stem_word_snowball(word: str, language: str = "spanish") -> str:
     """
-    Aplica stemming usando el algoritmo Snowball.
+    Aplica stemming using el algoritmo Snowball.
 
-    Snowball soporta múltiples idiomas, incluyendo español.
+    Snowball soporta múltiples languages, incluyendo español.
 
     Ejemplo:
         >>> stem_word_snowball("corriendo", "spanish")
@@ -65,14 +65,14 @@ def stem_word_snowball(word: str, language: str = "spanish") -> str:
     Returns:
         Stem de la palabra
     """
-    # TODO: Implementa con SnowballStemmer de NLTK
-    # Pista: Este stemmer acepta un parámetro de idioma al crearse
+    # TODO: Implement with SnowballStemmer de NLTK
+    # Hint: Este stemmer acepta un parámetro de language al crearse
     pass
 
 
 def stem_sentence(sentence: str, language: str = "spanish") -> str:
     """
-    Aplica stemming a todas las palabras de una oración.
+    Aplica stemming a todas las words de una oración.
 
     Ejemplo:
         >>> stem_sentence("Los gatos están corriendo")
@@ -83,19 +83,19 @@ def stem_sentence(sentence: str, language: str = "spanish") -> str:
         language: Idioma
 
     Returns:
-        Oración con palabras stemmed
+        Oración with words stemmed
     """
-    # TODO: Implementa stemming de oración
+    # TODO: Implement stemming de oración
     # Pistas:
-    # 1. Divide la oración en palabras (tokenización simple)
+    # 1. Divide la oración en words (tokenización simple)
     # 2. Aplica stemming a cada palabra (usa una función que ya creaste)
-    # 3. Une las palabras procesadas
+    # 3. Une las words procesadas
     pass
 
 
 def lemmatize_word_nltk(word: str, pos: str = "n") -> str:
     """
-    Lemmatiza una palabra usando NLTK WordNet.
+    Lemmatiza una palabra using NLTK WordNet.
 
     Ejemplo:
         >>> lemmatize_word_nltk("running", pos="v")
@@ -110,39 +110,39 @@ def lemmatize_word_nltk(word: str, pos: str = "n") -> str:
     Returns:
         Lema de la palabra
     """
-    # TODO: Implementa con WordNetLemmatizer
-    # Pista: Crea una instancia del lemmatizer y usa su método lemmatize()
+    # TODO: Implement with WordNetLemmatizer
+    # Hint: Crea una instancia del lemmatizer y usa su método lemmatize()
     pass
 
 
 def lemmatize_with_spacy(text: str, lang: str = "es") -> List[str]:
     """
-    Lemmatiza un texto usando spaCy.
+    Lemmatiza un text using spaCy.
 
-    spaCy hace lemmatization automáticamente al procesar texto.
+    spaCy hace lemmatization automáticamente al procesar text.
 
     Ejemplo:
         >>> lemmatize_with_spacy("Los gatos están corriendo")
         ['el', 'gato', 'estar', 'correr']
 
     Args:
-        text: Texto a lemmatizar
+        text: Text a lemmatizar
         lang: Idioma ('es' o 'en')
 
     Returns:
-        Lista de lemas
+        List of lemas
     """
-    # TODO: Implementa lemmatization con spaCy
+    # TODO: Implement lemmatization with spaCy
     # Pistas:
     # 1. Carga el modelo spaCy apropiado
-    # 2. Procesa el texto
-    # 3. Cada token tiene un atributo con su lema
+    # 2. Procesa el text
+    # 3. Cada token tiene un atributo with su lema
     pass
 
 
 def compare_stem_vs_lemma(word: str, language: str = "spanish") -> dict:
     """
-    Compara el resultado de stemming vs lemmatization.
+    Comfor el resultado de stemming vs lemmatization.
 
     Ejemplo:
         >>> compare_stem_vs_lemma("corriendo")
@@ -157,10 +157,10 @@ def compare_stem_vs_lemma(word: str, language: str = "spanish") -> dict:
         language: Idioma
 
     Returns:
-        Diccionario con resultados
+        Diccionario with resultados
     """
-    # TODO: Implementa la comparación
-    # Usa las funciones que ya creaste para stemming y lemmatization
+    # TODO: Implement la comforción
+    # Usa las funciones que ya creaste for stemming y lemmatization
     return {
         "original": word,
         "stem": None,  # TODO: Aplica stemming aquí
@@ -170,7 +170,7 @@ def compare_stem_vs_lemma(word: str, language: str = "spanish") -> dict:
 
 def normalize_text(text: str, method: str = "lemma", language: str = "spanish") -> str:
     """
-    Normaliza un texto usando stemming o lemmatization.
+    Normalizes un text using stemming o lemmatization.
 
     Ejemplo:
         >>> normalize_text("Los gatos corrían rápidamente", method="stem")
@@ -179,14 +179,14 @@ def normalize_text(text: str, method: str = "lemma", language: str = "spanish") 
         'el gato correr rápidamente'
 
     Args:
-        text: Texto a normalizar
+        text: Text a normalizar
         method: 'stem' o 'lemma'
         language: Idioma
 
     Returns:
-        Texto normalizado
+        Text normalizado
     """
-    # TODO: Implementa normalización de texto
-    # Pista: Usa if/else para elegir entre stemming y lemmatization
-    # Cada método requiere un procesamiento diferente del texto
+    # TODO: Implement normalización de text
+    # Hint: Usa if/else for elegir entre stemming y lemmatization
+    # Cada método requiere un procesamiento diferente del text
     pass

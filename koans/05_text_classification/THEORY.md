@@ -1,3 +1,9 @@
+> ** Translation Note**: This file is currently in Spanish. English translation coming soon!
+> For now, you can use a translator or refer to the code examples which are language-agnostic.
+> Want to help translate? See [CONTRIBUTING.md](../../CONTRIBUTING.md)
+
+---
+
 # Teoría: Text Classification
 
 ## 📚 Tabla de Contenidos
