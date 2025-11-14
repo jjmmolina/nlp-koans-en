@@ -73,8 +73,8 @@ def cosine_similarity_words(word1: str, word2: str, lang: str = "es") -> float:
         0.23  # Baja similitud
 
     Args:
-        word1: Primera palabra
-        word2: Segunda palabra
+        word1: First word
+        word2: Second word
         lang: Language
 
     Returns:
@@ -102,7 +102,7 @@ def find_most_similar(
         top_n: Número de resultados
 
     Returns:
-        List of tuplas (palabra, similitud) ordenadas por similitud
+        List of tuples (word, similarity) sorted by similarity
     """
     # TODO: Implement búsqueda de similares
     # Hint: Calculates similitud con cada candidato y ordena
@@ -179,4 +179,5 @@ def cluster_words_by_similarity(
     # TODO: Implement clustering simple
     # Agrupa words con similitud por encima del threshold
     pass
+
 

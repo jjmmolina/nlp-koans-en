@@ -86,7 +86,7 @@ def call_openai_streaming(
     Note:
         Esta función es un generador. Debes iterar sobre ella para obtener
         los text fragments. Cada fragmento can be a word, part
-        de una palabra, o varios caracteres.
+        of a word, or several characters.
     """
     # TODO: Implement streaming de OpenAI
     # Hint: Activa streaming y procesa chunks en un loop
@@ -324,4 +324,5 @@ def safe_llm_call(
     # TODO: Implement llamada con reintentos
     # Hint: Usa backoff exponencial con time.sleep(2 ** attempt)
     pass
+
 

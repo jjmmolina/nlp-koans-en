@@ -28,8 +28,8 @@ class TestTokenizestionBasics:
 
         assert isinstance(result, list), "Debe retornar una lista"
         assert len(result) > 0, "La lista no debe estar vacía"
-        assert "Hola" in result, "Debe withtener la palabra 'Hola'"
-        # NLTK mantiene ¿ pegado a la palabra en Spanish
+        assert "Hola" in result, "Should contain the word 'Hola'"
+        # NLTK mantiene ¿ pegado a The word en Spanish
         assert (
             "¿cómo" in result or "cómo" in result
         ), "Debe withtener 'cómo' (with o sin ¿)"
@@ -103,7 +103,7 @@ class TestTokenCounting:
         result = count_tokens(text)
 
         assert isinstance(result, dict)
-        assert result.get("el") == 2, "La palabra 'el' aparece 2 veces"
+        assert result.get("el") == 2, "The word 'el' appears 2 times"
         assert result.get("gato") == 1
         assert result.get("perro") == 1
 
@@ -112,7 +112,7 @@ class TestTokenCounting:
         text = "Python python PYTHON"
         result = count_tokens(text)
 
-        # Debe withtar como la misma palabra
+        # Should count as the same word
         assert result.get("python") == 3
 
 
@@ -156,4 +156,5 @@ class TestRealWorldExamples:
 
         sentences = tokenize_sentences_nltk(text)
         assert len(sentences) >= 3
+
 

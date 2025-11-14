@@ -91,7 +91,7 @@ def fill_mask(text: str, lang: str = "es") -> List[Dict]:
     """
     Rellena words enmascaradas en un text.
 
-    Usa [MASK] o <mask> para marcar la palabra a predecir.
+    Usa [MASK] o <mask> para marcar The word a predecir.
 
     Example:
         >>> fill_mask("Python es un [MASK] de programación")
@@ -168,7 +168,7 @@ def translate_text(text: str, source_lang: str = "es", target_lang: str = "en") 
         "Hello world"
 
     Args:
-        text: Text a traducir
+        text: Text to translate
         source_lang: Language origen
         target_lang: Language destino
 
@@ -206,5 +206,6 @@ def compare_models_performance(
     # TODO: Implement comparación de models
     # Hint: Mide el tiempo de cada model y compara resultados
     pass
+
 
 

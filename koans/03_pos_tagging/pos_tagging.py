@@ -34,7 +34,7 @@ def pos_tag_nltk(text: str) -> List[Tuple[str, str]]:
         text: Text a etiquetar
 
     Returns:
-        List of tuplas (palabra, etiqueta)
+        List of tuples (word, tag)
     """
     # TODO: Implement POS tagging with NLTK
     # Pistas:
@@ -60,7 +60,7 @@ def pos_tag_spacy(text: str, lang: str = "es") -> List[Tuple[str, str, str]]:
         lang: Language ('es' o 'en')
 
     Returns:
-        List of tuplas (palabra, etiqueta_universal, etiqueta_detallada)
+        List of tuples (word, universal_tag, detailed_tag)
     """
     # TODO: Implement with spaCy
     # Pistas:
@@ -197,4 +197,5 @@ def pos_pattern_match(
     # 2. Recorre el text buscando ventanas del tamaño del patrón
     # 3. Comfor los POS tags de cada ventana with el patrón
     pass
+
 

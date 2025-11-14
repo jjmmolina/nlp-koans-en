@@ -67,7 +67,7 @@ class TestMostSimilar:
         
         assert isinstance(result, list)
         assert len(result) <= 3
-        # Cada elemento debe ser una tupla (palabra, score)
+        # Each element should be a tuple (word, score)
         if len(result) > 0:
             assert isinstance(result[0], tuple)
             assert len(result[0]) == 2
@@ -147,4 +147,5 @@ class TestRealWorldExamples:
         
         assert len(similarities) == 3
         assert all(isinstance(s, float) for s in similarities)
+
 
