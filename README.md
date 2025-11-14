@@ -1,282 +1,264 @@
-# 🧠 NLP Koans - Learn Natural Language Processing with TDD
+﻿#  NLP Koans - Learn Natural Language Processing with TDD
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
 [![pytest](https://img.shields.io/badge/tested%20with-pytest-orange.svg)](https://pytest.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![spaCy](https://img.shields.io/badge/spaCy-3.7%2B-09a3d5.svg)](https://spacy.io/)
-[![Transformers](https://img.shields.io/badge/🤗-Transformers-yellow.svg)](https://huggingface.co/transformers/)
+[![Transformers](https://img.shields.io/badge/-Transformers-yellow.svg)](https://huggingface.co/transformers/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
-Un proyecto tutorial tipo **Koan** para aprender **Procesamiento de Lenguaje Natural (NLP)** usando **Test-Driven Development (TDD)** en Python.
+A **Koan-style** tutorial project for learning **Natural Language Processing (NLP)** using **Test-Driven Development (TDD)** in Python.
 
-## 🎯 What are NLP Koans?
+>  **Language versions**: [Español](https://github.com/jjmmolina/nlp-koans) | **English** (you are here)
 
-Los **Koans** are learning exercises donde:
-1. ✅ Tests **fail initially** 
-2. 🔧 Tú **arreglas el código** para hacerlos pasar
-3. 🎓 **Aprendes** los conceptos de NLP progresivamente
+##  What are NLP Koans?
 
-## 🚀 Inicio Rápido
+**Koans** are learning exercises where:
+1.  Tests **fail initially** 
+2.  You **fix the code** to make them pass
+3.  You **learn** NLP concepts progressively
 
-### ⚡ Quick Start (5 minutos)
+##  Quick Start
+
+###  Quick Start (5 minutes)
 
 ```bash
-# 1. Clonar el repositorio
-git clone https://github.com/jjmmolina/nlp-koans.git
-cd nlp-koans
+# 1. Clone the repository
+git clone https://github.com/jjmmolina/nlp-koans-en.git
+cd nlp-koans-en
 
-# 2. Crear entorno virtual
+# 2. Create virtual environment
 python -m venv venv
 .\venv\Scripts\activate  # Windows
 # source venv/bin/activate  # Linux/Mac
 
-# 3. Instalar dependencias básicas (instala lo mínimo para empezar)
+# 3. Install basic dependencies
 pip install pytest nltk
 
-# 4. ¡Empezar con el primer koan!
+# 4. Start with the first koan!
 pytest koans/01_tokenization/test_tokenization.py -v
-# Verás tests fallando - ¡es lo esperado! 🎯
+# You will see failing tests - that is expected! 
 ```
 
-### 📦 Instalación Completa
+###  Full Installation
 
-Para usar TODOS los koans (incluyendo los avanzados):
+To use ALL koans (including advanced ones):
 
 ```bash
-# Instalar todas las dependencias (puede tardar)
+# Install all dependencies (may take some time)
 pip install -r requirements.txt
 
-# Descargar modelos de spaCy
-python -m spacy download es_core_news_sm
+# Download spaCy models
 python -m spacy download en_core_web_sm
+python -m spacy download es_core_news_sm  # Optional: Spanish model
 
-# Descargar recursos de NLTK
-python -c "import nltk; nltk.download('punkt'); nltk.download('stopwords'); nltk.download('averaged_perceptron_tagger'); nltk.download('wordnet'); nltk.download('omw-1.4'); nltk.download('punkt_tab')"
+# Download NLTK resources
+python -c "import nltk; nltk.download(''punkt''); nltk.download(''stopwords''); nltk.download(''averaged_perceptron_tagger''); nltk.download(''wordnet''); nltk.download(''omw-1.4''); nltk.download(''punkt_tab'')"
 
-# Ejecutar todos los tests
+# Run all tests
 pytest
 ```
 
-> 💡 **Consejo**: Empieza con el Quick Start. Instala el resto cuando llegues a koans avanzados.
+>  **Tip**: Start with Quick Start. Install the rest when you reach advanced koans.
 
-## 📚 Estructura de Koans
+##  Koan Structure
 
-### 🎯 Nivel Básico (Koans 1-4)
-| Koan | Tema | Librerías | Conceptos |
-|------|------|-----------|-----------|
-| **01** | Tokenización | NLTK, spaCy | Separación de texto en palabras/oraciones |
-| **02** | Stemming & Lemmatization | NLTK, spaCy | Normalización de palabras |
-| **03** | POS Tagging | spaCy, NLTK | Etiquetado gramatical |
-| **04** | Named Entity Recognition | spaCy | Extracción de entidades |
+###  Basic Level (Koans 1-4)
+| Koan | Topic | Libraries | Concepts |
+|------|-------|-----------|----------|
+| **01** | Tokenization | NLTK, spaCy | Splitting text into words/sentences |
+| **02** | Stemming & Lemmatization | NLTK, spaCy | Word normalization |
+| **03** | POS Tagging | spaCy, NLTK | Part-of-speech tagging |
+| **04** | Named Entity Recognition | spaCy | Entity extraction |
 
-### 🚀 Nivel Intermedio (Koans 5-7)
-| Koan | Tema | Librerías | Conceptos |
-|------|------|-----------|-----------|
-| **05** | Text Classification | scikit-learn | Clasificación de textos |
-| **06** | Sentiment Analysis | transformers | Análisis de sentimientos |
-| **07** | Word Embeddings | spaCy, gensim | Representaciones vectoriales |
+###  Intermediate Level (Koans 5-7)
+| Koan | Topic | Libraries | Concepts |
+|------|-------|-----------|----------|
+| **05** | Text Classification | scikit-learn | Text classification |
+| **06** | Sentiment Analysis | transformers | Sentiment analysis |
+| **07** | Word Embeddings | spaCy, gensim | Vector representations |
 
-### 🧠 Nivel Avanzado (Koans 8-9)
-| Koan | Tema | Librerías | Conceptos |
-|------|------|-----------|-----------|
-| **08** | Transformers | transformers (Hugging Face) | Modelos preentrenados |
-| **09** | Language Models | transformers | Generación de texto |
+###  Advanced Level (Koans 8-9)
+| Koan | Topic | Libraries | Concepts |
+|------|-------|-----------|----------|
+| **08** | Transformers | transformers (Hugging Face) | Pre-trained models |
+| **09** | Language Models | transformers | Text generation |
 
-### 🔮 Nivel Experto - LLMs Modernos (Koans 10-13)
-| Koan | Tema | Librerías | Conceptos |
-|------|------|-----------|-----------|
+###  Expert Level - Modern LLMs (Koans 10-13)
+| Koan | Topic | Libraries | Concepts |
+|------|-------|-----------|----------|
 | **10** | Modern LLMs & APIs | OpenAI, Anthropic, **Ollama** | GPT-4, Claude, Gemini, local LLMs, streaming, function calling, **structured outputs** |
-| **11** | AI Agents | LangChain, LangGraph | ReAct pattern, herramientas, memoria, callbacks, **DSPy** |
-| **12** | Semantic Search | sentence-transformers, ChromaDB, FAISS | Embeddings, vector databases, búsqueda semántica, **híbrida** |
-| **13** | RAG | LangChain, ChromaDB, **Instructor** | Retrieval-Augmented Generation, chunking, **evaluation**, **observabilidad** |
+| **11** | AI Agents | LangChain, LangGraph | ReAct pattern, tools, memory, callbacks, **DSPy** |
+| **12** | Semantic Search | sentence-transformers, ChromaDB, FAISS | Embeddings, vector databases, semantic search, **hybrid search** |
+| **13** | RAG | LangChain, ChromaDB, **Instructor** | Retrieval-Augmented Generation, chunking, **evaluation**, **observability** |
 
-> 🆕 **Novedades 2025**: Ollama para LLMs locales (sin API keys), Instructor para outputs estructurados, DSPy para optimización automática, Guardrails AI para seguridad, LangSmith para observabilidad.
+>  **2025 Updates**: Ollama for local LLMs (no API keys needed), Instructor for structured outputs, DSPy for automatic optimization, Guardrails AI for safety, LangSmith for observability.
 
-## 🎓 Cómo Usar Este Tutorial
+##  How to Use This Tutorial
 
-### 🎯 Tu Primer Koan en 3 Pasos
+###  Your First Koan in 3 Steps
 
-**Paso 1: Ejecuta el test (verás que falla)**
+**Step 1: Run the test (you will see it fail)**
 ```bash
 cd koans/01_tokenization
-pytest test_tokenization.py::TestTokenizationBasics::test_tokenize_words_nltk_spanish -v
+pytest test_tokenization.py::TestTokenizationBasics::test_tokenize_words_nltk_english -v
 ```
 
-Verás:
+You will see:
 ```
-FAILED - AssertionError: La lista no debe estar vacía
+FAILED - AssertionError: List should not be empty
 ```
 
-**Paso 2: Abre `tokenization.py` y encuentra:**
+**Step 2: Open `tokenization.py` and find:**
 ```python
 def tokenize_words_nltk(text: str) -> List[str]:
-    # TODO: Implementa la tokenización de palabras con nltk.word_tokenize()
-    # Pista: from nltk.tokenize import word_tokenize
-    return []  # ← Esto está mal, retorna lista vacía
+    # TODO: Implement word tokenization with nltk.word_tokenize()
+    # Hint: from nltk.tokenize import word_tokenize
+    return []  #  This is wrong, returns empty list
 ```
 
-**Paso 3: Implementa la solución:**
+**Step 3: Implement the solution:**
 ```python
 def tokenize_words_nltk(text: str) -> List[str]:
     from nltk.tokenize import word_tokenize
-    return word_tokenize(text)  # ← ¡Así está bien!
+    return word_tokenize(text)  #  Now it is correct!
 ```
 
-**Verifica:**
+**Verify:**
 ```bash
-pytest test_tokenization.py::TestTokenizationBasics::test_tokenize_words_nltk_spanish -v
-# ✅ PASSED - ¡Felicidades!
+pytest test_tokenization.py::TestTokenizationBasics::test_tokenize_words_nltk_english -v
+#  PASSED - Congratulations!
 ```
 
-**¡Repite este proceso con todas las funciones!** 🔄
+**Repeat this process with all functions!** 
 
-### Paso 1: Empieza con el Primer Koan
+##  Technologies and Libraries
+
+- ** Python 3.8+**: Base language
+- ** pytest**: Testing framework
+- ** spaCy**: Industrial-strength NLP
+- ** NLTK**: Classic Natural Language Toolkit
+- ** transformers**: Hugging Face models
+- ** scikit-learn**: Traditional Machine Learning
+- ** gensim**: Topic modeling and embeddings
+
+##  Additional Documentation
+
+-  [**GUIDE.md**](GUIDE.md) - Detailed step-by-step guide
+-  [**LEARNING_PATH.md**](LEARNING_PATH.md) - Optimized learning path with estimated times
+-  [**FAQ.md**](FAQ.md) - Frequently asked questions and troubleshooting
+-  [**CONTRIBUTING.md**](CONTRIBUTING.md) - How to contribute to the project
+-  [**LICENSE**](LICENSE) - MIT License
+-  [**PROJECT_SUMMARY.md**](PROJECT_SUMMARY.md) - Technical project summary
+
+##  Recommended Order
+
+It is recommended to follow the koan order (01  13) as each builds on previous concepts.
+
+**Learning Levels**:
+-  **Basic (Koans 1-4)**: NLP fundamentals - 6-8 hours
+-  **Intermediate (Koans 5-7)**: ML applied to NLP - 8-10 hours  
+-  **Advanced (Koans 8-9)**: Transformers and LLMs - 8-10 hours
+-  **Expert (Koans 10-13)**: Modern APIs, Agents, RAG - 10-15 hours
+
+>  **Koans 10-13 now include local alternatives with Ollama** (no API keys needed). Commercial API keys (OpenAI, Anthropic) are optional for comparing models.
+
+>  **Tech Radar 2025**: The course incorporates techniques from Thoughtworks Technology Radar Vol. 33: DSPy (programming over prompting), Instructor (structured outputs), Guardrails AI (safety), LangSmith (observability), and Mem0 (personalized memory).
+
+**Prerequisites**:
+-  Basic Python (variables, functions, classes)
+-  Basic understanding of testing (optional but helpful)
+
+**You do not need to know**:
+-  Previous NLP knowledge
+-  Advanced mathematics
+-  Deep Learning
+
+##  Tips
+
+1. **Do not skip koans**: Each teaches fundamental concepts
+2. **Read the documentation**: Each koan has explanatory comments
+3. **Experiment**: Try with your own texts
+4. **Use VS Code**: Configured with tasks and debugging
+
+##  VS Code Integration
+
+This project is optimized for VS Code with:
+-  Automatic testing configuration
+-  Integrated debugging
+-  Tasks to run individual koans
+
+##  Quick Wins - Your First 30 Minutes
+
+Want to see immediate results? Follow this:
+
+### 1 Quick Setup (5 min)
 ```bash
-cd koans/01_tokenization
-pytest test_tokenization.py -v
-```
-
-### Paso 2: Lee los Errores
-Los tests te dirán **exactamente** qué falta. Ejemplo:
-```
-FAILED - assert actual == expected
-AssertionError: Tu implementación debe tokenizar el texto
-```
-
-### Paso 3: Arregla el Código
-Abre `tokenization.py` y completa las funciones marcadas con `# TODO`
-
-### Paso 4: Repite hasta que Pasen Todos los Tests ✅
-
-### Paso 5: ¡Siguiente Koan! 🎉
-
-## 🛠️ Tecnologías y Librerías
-
-- **🐍 Python 3.8+**: Lenguaje base
-- **✅ pytest**: Framework de testing
-- **🦅 spaCy**: Procesamiento industrial de NLP
-- **📚 NLTK**: Natural Language Toolkit clásico
-- **🤗 transformers**: Modelos de Hugging Face
-- **📊 scikit-learn**: Machine Learning tradicional
-- **🎯 gensim**: Topic modeling y embeddings
-
-## 📖 Documentación Adicional
-
-- 📘 [**GUIA.md**](GUIA.md) - Guía detallada paso a paso
-- 🗺️ [**LEARNING_PATH.md**](LEARNING_PATH.md) - Ruta de aprendizaje optimizada con tiempos estimados
-- ❓ [**FAQ.md**](FAQ.md) - Preguntas frecuentes y troubleshooting
-- 🤝 [**CONTRIBUTING.md**](CONTRIBUTING.md) - Cómo contribuir al proyecto
-- 📄 [**LICENSE**](LICENSE) - Licencia MIT
-- 📊 [**PROJECT_SUMMARY.md**](PROJECT_SUMMARY.md) - Resumen técnico del proyecto
-
-## 🌟 Orden Recomendado
-
-Se recomienda seguir el orden de los koans (01 → 13) ya que cada uno construye sobre conceptos anteriores.
-
-**Niveles de Aprendizaje**:
-- 🎯 **Básico (Koans 1-4)**: Fundamentos de NLP - 6-8 horas
-- 🚀 **Intermedio (Koans 5-7)**: ML aplicado a NLP - 8-10 horas  
-- 🧠 **Avanzado (Koans 8-9)**: Transformers y LLMs - 8-10 horas
-- 🔮 **Experto (Koans 10-13)**: APIs modernas, Agentes, RAG - 10-15 horas
-
-> 💡 **Los koans 10-13 ahora incluyen alternativas locales con Ollama** (sin API keys necesarias). Las API keys comerciales (OpenAI, Anthropic) son opcionales para comparar modelos.
-
-> 🔬 **Tech Radar 2025**: El curso incorpora técnicas del Thoughtworks Technology Radar Vol. 33: DSPy (programming over prompting), Instructor (structured outputs), Guardrails AI (safety), LangSmith (observabilidad), y Mem0 (memoria personalizada).
-
-**Prerrequisitos**:
-- ✅ Python básico (variables, funciones, clases)
-- ✅ Comprensión básica de testing (opcional pero útil)
-
-**No necesitas saber**:
-- ❌ NLP previo
-- ❌ Matemáticas avanzadas
-- ❌ Deep Learning
-
-## 💡 Consejos
-
-1. **No te saltes koans**: Cada uno enseña conceptos fundamentales
-2. **Lee la documentación**: Cada koan tiene comentarios explicativos
-3. **Experimenta**: Prueba con tus propios textos
-4. **Usa VS Code**: Configurado con tareas y debugging
-
-## � VS Code Integration
-
-Este proyecto está optimizado para VS Code con:
-- ✅ Configuración de testing automática
-- ✅ Debugging integrado
-- ✅ Tasks para ejecutar koans individuales
-
-## 🏆 Quick Wins - Tus Primeros 30 Minutos
-
-¿Quieres ver resultados inmediatos? Sigue esto:
-
-### 1️⃣ Setup Rápido (5 min)
-```bash
-git clone https://github.com/jjmmolina/nlp-koans.git
-cd nlp-koans
+git clone https://github.com/jjmmolina/nlp-koans-en.git
+cd nlp-koans-en
 python -m venv venv
 .\venv\Scripts\activate  # Windows
 pip install pytest nltk
 ```
 
-### 2️⃣ Tu Primera Victoria (10 min)
+### 2 Your First Victory (10 min)
 ```bash
 cd koans/01_tokenization
 pytest test_tokenization.py::TestCustomTokenization::test_custom_tokenize_spaces -v
 ```
 
-Abre `tokenization.py` y cambia:
+Open `tokenization.py` and change:
 ```python
 def custom_tokenize(text: str, delimiter: str = " ") -> List[str]:
-    return []  # ❌ MAL
+    return []  #  WRONG
 ```
 
-Por:
+To:
 ```python
 def custom_tokenize(text: str, delimiter: str = " ") -> List[str]:
-    return text.split(delimiter)  # ✅ BIEN
+    return text.split(delimiter)  #  CORRECT
 ```
 
-Ejecuta el test de nuevo:
+Run the test again:
 ```bash
 pytest test_tokenization.py::TestCustomTokenization::test_custom_tokenize_spaces -v
-# ✅ PASSED!
+#  PASSED!
 ```
 
-**🎉 ¡Felicidades! Completaste tu primer koan.**
+** Congratulations! You completed your first koan.**
 
-### 3️⃣ Siguiente Nivel (15 min)
+### 3 Next Level (15 min)
 
-Ahora implementa `tokenize_words_nltk()`:
-1. Lee el archivo `HINTS.md`
-2. Sigue las pistas nivel por nivel
-3. Haz pasar el test
+Now implement `tokenize_words_nltk()`:
+1. Read the `HINTS.md` file
+2. Follow the hints level by level
+3. Make the test pass
 
 ```bash
-pytest test_tokenization.py::TestTokenizationBasics::test_tokenize_words_nltk_spanish -v
+pytest test_tokenization.py::TestTokenizationBasics::test_tokenize_words_nltk_english -v
 ```
 
-**💪 ¡Ya dominas tokenización básica!**
+** You now master basic tokenization!**
 
 ---
 
-**Continúa con el resto del Koan 01 y estarás oficialmente en camino al dominio de NLP.** 🚀
+**Continue with the rest of Koan 01 and you will be officially on your way to NLP mastery.** 
 
-## 🤝 Contribuir
+##  Contributing
 
-¡Las contribuciones son bienvenidas! Ve [CONTRIBUTING.md](CONTRIBUTING.md) para más detalles.
+Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
-## 📝 Licencia
+##  License
 
-MIT License - ve [LICENSE](LICENSE) para más detalles.
+MIT License - see [LICENSE](LICENSE) for details.
 
-## 🙏 Inspiración
+##  Inspiration
 
-Proyecto inspirado en:
+Project inspired by:
 - Ruby Koans
 - Go Koans
-- El poder del aprendizaje mediante práctica deliberada
+- The power of deliberate practice learning
 
 ---
 
-**¡Disfruta aprendiendo NLP! 🚀🧠**
+**Enjoy learning NLP! **
