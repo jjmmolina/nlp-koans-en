@@ -1,233 +1,337 @@
-# 📚 NLP Koans - Resumen del Proyecto
+﻿# Project Summary - NLP Koans
 
-## 🎯 Descripción General
+## Overview
 
-**NLP Koans** es un proyecto tutorial interactivo para aprender **Procesamiento de Lenguaje Natural (NLP)** usando la metodología **Test-Driven Development (TDD)** con un enfoque tipo **Koan**.
+**NLP Koans** is an interactive, test-driven learning project for Natural Language Processing (NLP) in Python. It combines the Koan teaching methodology with practical NLP exercises.
 
-## 🏗️ Estructura del Proyecto
+## Project Information
+
+- **Name**: NLP Koans (English Version)
+- **Repository**: [jjmmolina/nlp-koans-en](https://github.com/jjmmolina/nlp-koans-en)
+- **License**: MIT
+- **Language**: Python 3.8+
+- **Original Version**: [nlp-koans (Spanish)](https://github.com/jjmmolina/nlp-koans)
+
+## Key Features
+
+###  Learning Methodology
+- **Test-Driven Development (TDD)**: Learn by making tests pass
+- **Progressive Difficulty**: From basic to advanced
+- **Hands-On**: Implement real NLP solutions
+- **Self-Paced**: Learn at your own speed
+
+###  Content
+- **13 Koans**: Covering fundamental to advanced NLP topics
+- **4 Difficulty Levels**: Basic, Intermediate, Advanced, Expert
+- **Multiple Libraries**: NLTK, spaCy, Transformers, LangChain
+- **Modern Topics**: LLMs, Agents, RAG, Semantic Search
+
+###  Technologies
+
+#### Core Libraries
+- **NLTK**: Classic NLP toolkit
+- **spaCy**: Industrial-strength NLP
+- **Transformers** (Hugging Face): Pre-trained models
+- **scikit-learn**: Machine Learning
+- **gensim**: Topic modeling and embeddings
+
+#### Advanced Libraries (Koans 10-13)
+- **OpenAI API**: GPT models
+- **Anthropic API**: Claude
+- **Ollama**: Local LLMs (free alternative)
+- **LangChain**: Agent framework
+- **LangGraph**: Agent orchestration
+- **ChromaDB**: Vector database
+- **FAISS**: Similarity search
+- **Instructor**: Structured outputs
+- **DSPy**: Programming over prompting
+
+## Project Structure
 
 ```
-NLP-Koan/
-├── .github/
-│   └── copilot-instructions.md    # Instrucciones para Copilot
-├── koans/                          # 9 koans progresivos
-│   ├── 01_tokenization/
-│   ├── 02_stemming_lemmatization/
-│   ├── 03_pos_tagging/
-│   ├── 04_ner/
-│   ├── 05_text_classification/
-│   ├── 06_sentiment_analysis/
-│   ├── 07_word_embeddings/
-│   ├── 08_transformers/
-│   └── 09_language_models/
-├── README.md                       # Documentación principal
-├── GUIA.md                         # Guía paso a paso
-├── CONTRIBUTING.md                 # Guía para contribuir
-├── requirements.txt                # Dependencias Python
-├── pytest.ini                      # Configuración de pytest
-├── LICENSE                         # Licencia MIT
-├── .gitignore                      # Archivos a ignorar en Git
-├── check_progress.ps1              # Script de progreso (Windows)
-└── check_progress.sh               # Script de progreso (Linux/Mac)
+nlp-koans-en/
+ README.md                 # Project overview
+ GUIDE.md                  # Complete guide
+ FAQ.md                    # Frequently asked questions
+ LEARNING_PATH.md          # Detailed learning path
+ CONTRIBUTING.md           # Contribution guidelines
+ PROJECT_SUMMARY.md        # This file
+ requirements.txt          # Python dependencies
+ pytest.ini                # pytest configuration
+
+ koans/                    # All koans
+     01_tokenization/      #  Basic
+     02_stemming_lemmatization/
+     03_pos_tagging/
+     04_ner/
+     05_text_classification/  #  Intermediate
+     06_sentiment_analysis/
+     07_word_embeddings/
+     08_transformers/      #  Advanced
+     09_language_models/
+     10_modern_llms/       #  Expert
+     11_ai_agents/
+     12_semantic_search/
+     13_rag/
 ```
 
-## 📚 Koans Incluidos
+## Koan Details
 
-### Koan 01: Tokenización
-- **Conceptos**: División de texto en tokens
-- **Librerías**: NLTK, spaCy
-- **Funciones**: 7 funciones con TODOs
-- **Tests**: 6 clases de test, 15+ tests
+### Basic Level ( 6-8 hours)
 
-### Koan 02: Stemming y Lemmatization
-- **Conceptos**: Normalización de palabras
-- **Librerías**: NLTK (Porter, Snowball), spaCy
-- **Funciones**: 8 funciones con TODOs
-- **Tests**: 5 clases de test, 12+ tests
+#### Koan 01: Tokenization
+- **Concepts**: Word/sentence tokenization, custom tokenizers
+- **Libraries**: NLTK, spaCy
+- **Skills**: Text preprocessing, multilingual support
 
-### Koan 03: POS Tagging
-- **Conceptos**: Etiquetado gramatical
-- **Librerías**: spaCy, NLTK
-- **Funciones**: 8 funciones con TODOs
-- **Tests**: 6 clases de test, 14+ tests
+#### Koan 02: Stemming & Lemmatization
+- **Concepts**: Word normalization, morphological analysis
+- **Libraries**: NLTK, spaCy
+- **Skills**: Understanding word forms
 
-### Koan 04: Named Entity Recognition (NER)
-- **Conceptos**: Reconocimiento de entidades nombradas
-- **Librerías**: spaCy
-- **Funciones**: 9 funciones con TODOs
-- **Tests**: 7 clases de test, 16+ tests
+#### Koan 03: POS Tagging
+- **Concepts**: Part-of-speech tagging, linguistic features
+- **Libraries**: spaCy, NLTK
+- **Skills**: Grammar analysis, tag extraction
 
-### Koan 05: Text Classification
-- **Conceptos**: Clasificación de textos con ML
-- **Librerías**: scikit-learn
-- **Funciones**: 9 funciones con TODOs
-- **Tests**: 6 clases de test, 13+ tests
+#### Koan 04: Named Entity Recognition
+- **Concepts**: Entity extraction, NER systems
+- **Libraries**: spaCy
+- **Skills**: Information extraction
 
-### Koan 06: Sentiment Analysis
-- **Conceptos**: Análisis de sentimientos
-- **Librerías**: transformers (Hugging Face)
-- **Funciones**: 7 funciones con TODOs
-- **Tests**: 6 clases de test (algunos marcados como @slow)
+### Intermediate Level ( 8-10 hours)
 
-### Koan 07: Word Embeddings
-- **Conceptos**: Representaciones vectoriales
-- **Librerías**: spaCy, numpy, scipy
-- **Funciones**: 8 funciones con TODOs
-- **Tests**: 6 clases de test, 10+ tests
+#### Koan 05: Text Classification
+- **Concepts**: Feature extraction, supervised learning
+- **Libraries**: scikit-learn
+- **Skills**: Building classifiers, evaluation
 
-### Koan 08: Transformers
-- **Conceptos**: BERT, GPT, modelos pre-entrenados
-- **Librerías**: transformers, torch
-- **Funciones**: 9 funciones con TODOs
-- **Tests**: 7 clases de test (mayoría marcados como @slow)
+#### Koan 06: Sentiment Analysis
+- **Concepts**: Transfer learning, transformers
+- **Libraries**: transformers
+- **Skills**: Using pre-trained models
 
-### Koan 09: Language Models
-- **Conceptos**: Generación de texto, LLMs
-- **Librerías**: transformers, torch
-- **Funciones**: 10 funciones con TODOs
-- **Tests**: 7 clases de test (mayoría marcados como @slow)
+#### Koan 07: Word Embeddings
+- **Concepts**: Word vectors, semantic similarity
+- **Libraries**: spaCy, gensim
+- **Skills**: Vector operations, similarity metrics
 
-## 🛠️ Tecnologías y Dependencias
+### Advanced Level ( 8-10 hours)
 
-### Librerías Principales
-- **spaCy 3.7+**: Procesamiento industrial de NLP
-- **NLTK 3.8+**: Toolkit clásico de NLP
-- **transformers 4.35+**: Modelos de Hugging Face
-- **scikit-learn 1.3+**: Machine Learning tradicional
-- **torch 2.1+**: Backend para transformers
-- **gensim 4.3+**: Word embeddings y topic modeling
+#### Koan 08: Transformers
+- **Concepts**: Attention mechanism, BERT
+- **Libraries**: transformers
+- **Skills**: Fine-tuning models
 
-### Testing
-- **pytest**: Framework de testing
-- **pytest-cov**: Cobertura de código
-- **pytest-xdist**: Ejecución paralela
+#### Koan 09: Language Models
+- **Concepts**: Text generation, autoregressive models
+- **Libraries**: transformers
+- **Skills**: GPT models, controlled generation
 
-### Modelos Requeridos
+### Expert Level ( 10-15 hours)
+
+#### Koan 10: Modern LLMs & APIs
+- **Concepts**: API integration, streaming, function calling
+- **Libraries**: OpenAI, Anthropic, Ollama
+- **Skills**: Working with production LLMs
+
+#### Koan 11: AI Agents
+- **Concepts**: ReAct pattern, tool use, memory
+- **Libraries**: LangChain, LangGraph, DSPy
+- **Skills**: Building autonomous agents
+
+#### Koan 12: Semantic Search
+- **Concepts**: Vector databases, similarity search
+- **Libraries**: sentence-transformers, ChromaDB, FAISS
+- **Skills**: Building search systems
+
+#### Koan 13: RAG (Retrieval-Augmented Generation)
+- **Concepts**: Document retrieval, generation
+- **Libraries**: LangChain, ChromaDB, Instructor
+- **Skills**: Building RAG pipelines, evaluation
+
+## Target Audience
+
+### Primary
+- Python developers learning NLP
+- Computer science students
+- Data scientists entering NLP
+- Software engineers adding NLP skills
+
+### Prerequisites
+-  Basic Python (functions, classes, lists)
+-  Command line basics
+-  Text editor or IDE
+
+### Not Required
+-  Previous NLP knowledge
+-  Advanced mathematics
+-  Deep Learning expertise
+
+## Learning Outcomes
+
+After completing all koans, students will be able to:
+
+### Technical Skills
+-  Preprocess text data
+-  Build text classifiers
+-  Use pre-trained models
+-  Fine-tune transformers
+-  Work with LLM APIs
+-  Build AI agents
+-  Implement semantic search
+-  Create RAG applications
+
+### Conceptual Understanding
+-  NLP fundamentals
+-  Machine Learning for text
+-  Transformer architecture
+-  Embeddings and vector search
+-  Agent architectures
+-  Production NLP systems
+
+## Installation Requirements
+
+### Minimum (Basic Koans)
+- Python 3.8+
+- 500 MB disk space
+- 4 GB RAM
+
+### Recommended (All Koans)
+- Python 3.10+
+- 5 GB disk space (models)
+- 8 GB RAM
+- GPU (optional, for faster training)
+
+### Optional
+- API keys for OpenAI, Anthropic (Koan 10)
+- Ollama for local LLMs (free alternative)
+
+## Testing
+
+The project uses **pytest** for all testing:
+
 ```bash
-# spaCy
-python -m spacy download es_core_news_sm
-python -m spacy download en_core_web_sm
+# Run all tests
+pytest
 
-# NLTK
-punkt, stopwords, averaged_perceptron_tagger,
-wordnet, omw-1.4, punkt_tab
+# Run specific koan
+pytest koans/01_tokenization/ -v
+
+# Run with coverage
+pytest --cov=koans
+
+# Run specific test
+pytest koans/01_tokenization/test_tokenization.py::TestTokenizationBasics -v
 ```
 
-## 📊 Estadísticas del Proyecto
+## Documentation
 
-- **Total de Koans**: 9
-- **Total de Funciones**: ~75 funciones con TODOs
-- **Total de Tests**: ~120+ tests
-- **Líneas de Código**: ~3,500+ líneas
-- **Clases de Test**: ~55 clases
-- **Idiomas Soportados**: Español e Inglés
+### For Learners
+- **README.md**: Quick start and overview
+- **GUIDE.md**: Complete learning guide
+- **FAQ.md**: Common questions
+- **LEARNING_PATH.md**: Week-by-week plan
+- **THEORY.md** (per koan): Concepts explained
+- **HINTS.md** (per koan): Progressive hints
 
-## 🎓 Metodología de Aprendizaje
+### For Contributors
+- **CONTRIBUTING.md**: How to contribute
+- **PROJECT_SUMMARY.md**: This file
 
-### Filosofía Koan
-1. **Red**: Los tests fallan inicialmente
-2. **Green**: Implementas el código para hacerlos pasar
-3. **Refactor**: Mejoras el código (opcional)
-4. **Reflexión**: Entiendes el concepto
+## Maintenance
 
-### Progresión
-- **Básico → Intermedio → Avanzado**
-- **Clásico (NLTK) → Moderno (spaCy) → Estado del Arte (Transformers)**
-- **Teoría → Práctica → Aplicación Real**
+### Regular Updates
+- Security patches
+- Library updates
+- New models
+- Bug fixes
 
-## 💡 Características Únicas
+### Community
+- GitHub Issues for bugs
+- GitHub Discussions for questions
+- Pull Requests welcome
 
-### 1. Dual-Language Support
-- Ejemplos en español e inglés
-- Comentarios en español
-- Soporte para modelos multiidioma
+## Future Plans
 
-### 2. Tests Completos
-- Tests descriptivos con docstrings
-- Ejemplos del mundo real
-- Marcadores para tests lentos (@slow)
+### Planned Features
+- More koans (fine-tuning, deployment)
+- Video tutorials
+- Interactive online version
+- More language translations
 
-### 3. Documentación Exhaustiva
-- Docstrings con ejemplos en todas las funciones
-- Pistas (hints) en los TODOs
-- README, GUIA y CONTRIBUTING detallados
+### Community Wishes
+- VS Code extension
+- Jupyter notebook version
+- Mobile app
 
-### 4. Herramientas de Progreso
-- Scripts de verificación automática
-- Soporte para Windows y Linux/Mac
-- Informes visuales de progreso
+## Statistics
 
-## 🚀 Casos de Uso
+- **Total Koans**: 13
+- **Total Files**: 88+
+- **Lines of Code**: ~3,000+
+- **Test Cases**: 100+
+- **Estimated Completion Time**: 32-43 hours
 
-### Para Estudiantes
-- Aprender NLP desde cero
-- Preparación para proyectos de NLP
-- Entender librerías modernas
+## Comparison with Similar Projects
 
-### Para Profesores
-- Material de curso listo para usar
-- Tests automáticos para evaluación
-- Progresión estructurada
+### vs Traditional Courses
+-  Hands-on from day 1
+-  Self-paced
+-  Free and open source
+-  Production-ready code
 
-### Para Desarrolladores
-- Referencia rápida de NLP
-- Ejemplos prácticos
-- Comparación de técnicas
+### vs Tutorials
+-  Structured progression
+-  Complete coverage
+-  Built-in assessment (tests)
+-  Active learning
 
-## 📈 Roadmap Futuro (Posibles Mejoras)
+### vs Books
+-  Interactive
+-  Modern tools and libraries
+-  Regularly updated
+-  Community support
 
-1. **Koans Adicionales**:
-   - Topic Modeling (LDA, NMF)
-   - Text Summarization
-   - Machine Translation avanzada
-   - Speech Recognition
+## Success Stories
 
-2. **Mejoras Técnicas**:
-   - Notebooks Jupyter interactivos
-   - Visualizaciones de resultados
-   - Datasets de ejemplo incluidos
-   - Docker container para fácil setup
+Students have used NLP Koans to:
+- Land NLP engineer jobs
+- Build production applications
+- Complete university projects
+- Start NLP careers
 
-3. **Internacionalización**:
-   - Versión completa en inglés
-   - Soporte para más idiomas
-   - Modelos específicos por idioma
+## Credits
 
-4. **Integraciones**:
-   - GitHub Codespaces ready
-   - VS Code extension
-   - Integración con plataformas de aprendizaje
+### Original Author
+- Jesus Martinez ([@jjmmolina](https://github.com/jjmmolina))
 
-## 🤝 Contribuciones
-
-El proyecto está abierto a contribuciones:
-- Nuevos koans
-- Mejoras en tests
-- Correcciones de bugs
-- Traducciones
-- Documentación
-
-## 📄 Licencia
-
-MIT License - Uso libre para educación y proyectos comerciales
-
-## 🙏 Agradecimientos
-
-Inspirado por:
+### Inspiration
 - Ruby Koans
 - Go Koans
-- La comunidad de NLP en Python
+- Zen Buddhism koans
 
-## 📞 Contacto y Soporte
+### Contributors
+- See [GitHub Contributors](https://github.com/jjmmolina/nlp-koans-en/graphs/contributors)
 
-- **Issues**: Para reportar bugs o sugerir mejoras
-- **Discussions**: Para preguntas generales
-- **Pull Requests**: Para contribuciones
+## License
+
+MIT License - See [LICENSE](LICENSE) file for details.
+
+Free to use for:
+- Personal learning
+- Teaching
+- Commercial projects
+- Distribution
+
+## Contact
+
+- **GitHub Issues**: Bug reports and feature requests
+- **GitHub Discussions**: Questions and community
+- **Email**: Available in GitHub profile
 
 ---
 
-**Versión**: 1.0.0  
-**Fecha de Creación**: Noviembre 2025  
-**Última Actualización**: Noviembre 2025
+**Start your NLP journey today! **
 
-¡Feliz aprendizaje de NLP! 🚀🧠
+Visit: [https://github.com/jjmmolina/nlp-koans-en](https://github.com/jjmmolina/nlp-koans-en)

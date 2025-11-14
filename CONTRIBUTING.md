@@ -1,214 +1,289 @@
-# 🤝 Contribuyendo a NLP Koans
+﻿# Contributing to NLP Koans
 
-¡Gracias por tu interés en contribuir! Este proyecto es de código abierto y las contribuciones son bienvenidas.
+First off, thank you for considering contributing to NLP Koans! It'\''s people like you that make this project a great learning resource for everyone.
 
-## 🎯 Tipos de Contribuciones
+## Table of Contents
 
-### 1. Reportar Bugs
-- Usa los Issues de GitHub
-- Describe el problema claramente
-- Incluye pasos para reproducirlo
-- Especifica tu entorno (Python version, OS, etc.)
+- [Code of Conduct](#code-of-conduct)
+- [How Can I Contribute?](#how-can-i-contribute)
+- [Development Setup](#development-setup)
+- [Contribution Guidelines](#contribution-guidelines)
+- [Style Guide](#style-guide)
+- [Commit Guidelines](#commit-guidelines)
 
-### 2. Sugerir Mejoras
-- Nuevos koans o ejercicios
-- Mejoras en la documentación
-- Correcciones de errores tipográficos
+## Code of Conduct
 
-### 3. Enviar Pull Requests
-- Arreglos de bugs
-- Nuevos tests
-- Mejoras de código
-- Traducciones
+This project and everyone participating in it is governed by our commitment to:
 
-## 🔧 Proceso de Desarrollo
+- Be respectful and inclusive
+- Welcome newcomers
+- Accept constructive criticism gracefully
+- Focus on what is best for the community
 
-### 1. Fork y Clone
+## How Can I Contribute?
 
-```bash
-# Fork el repositorio en GitHub
-# Luego clona tu fork
-git clone https://github.com/TU-USUARIO/NLP-Koan.git
-cd NLP-Koan
+### Reporting Bugs
+
+Before creating bug reports, please check existing issues. When creating a bug report, include:
+
+- **Clear title and description**
+- **Steps to reproduce**
+- **Expected vs actual behavior**
+- **Environment details** (OS, Python version, etc.)
+- **Code samples** if applicable
+
+**Example**:
+```markdown
+**Bug**: Test fails on Windows with Python 3.11
+
+**Steps to reproduce**:
+1. Install dependencies on Windows
+2. Run `pytest koans/01_tokenization`
+3. See error
+
+**Expected**: All tests pass
+**Actual**: ImportError
+
+**Environment**:
+- OS: Windows 11
+- Python: 3.11.5
+- pytest: 7.4.0
 ```
 
-### 2. Crear Entorno
+### Suggesting Enhancements
+
+Enhancement suggestions are tracked as GitHub issues. When suggesting:
+
+- **Use a clear title**
+- **Provide detailed description**
+- **Explain why it would be useful**
+- **Provide examples** if applicable
+
+### Contributing Code
+
+#### Types of Contributions
+
+1. **Fix bugs** in existing koans
+2. **Improve documentation**
+3. **Add tests**
+4. **Improve hints**
+5. **Translate to other languages**
+6. **Create new koans** (discuss first)
+
+#### Pull Request Process
+
+1. **Fork the repository**
+2. **Create a feature branch** (`git checkout -b feature/amazing-feature`)
+3. **Make your changes**
+4. **Add tests** if applicable
+5. **Update documentation**
+6. **Commit your changes** (see commit guidelines)
+7. **Push to your fork** (`git push origin feature/amazing-feature`)
+8. **Open a Pull Request**
+
+## Development Setup
+
+### 1. Fork and Clone
 
 ```bash
+# Fork on GitHub, then clone your fork
+git clone https://github.com/YOUR_USERNAME/nlp-koans-en.git
+cd nlp-koans-en
+
+# Add upstream remote
+git remote add upstream https://github.com/jjmmolina/nlp-koans-en.git
+```
+
+### 2. Set Up Environment
+
+```bash
+# Create virtual environment
 python -m venv venv
-source venv/bin/activate  # Linux/Mac
-# o
-.\venv\Scripts\activate  # Windows
+source venv/bin/activate  # or .\venv\Scripts\activate on Windows
 
+# Install dependencies
 pip install -r requirements.txt
+
+# Install development dependencies
+pip install pytest black mypy
 ```
 
-### 3. Crear Rama
+### 3. Run Tests
 
 ```bash
-git checkout -b feature/nueva-funcionalidad
-# o
-git checkout -b fix/arreglo-bug
-```
-
-### 4. Hacer Cambios
-
-- Sigue el estilo de código existente
-- Agrega tests para nuevo código
-- Actualiza documentación si es necesario
-
-### 5. Ejecutar Tests
-
-```bash
-# Ejecutar todos los tests
+# Run all tests
 pytest
 
-# Ejecutar tests específicos
-pytest koans/01_tokenization/
+# Run specific koan tests
+pytest koans/01_tokenization/ -v
 
-# Con cobertura
+# Run with coverage
 pytest --cov=koans
 ```
 
-### 6. Commit
+## Contribution Guidelines
 
-```bash
-git add .
-git commit -m "feat: descripción clara del cambio"
+### Adding a New Koan
+
+Before adding a new koan:
+
+1. **Open an issue** to discuss the topic
+2. **Check if it fits** the learning progression
+3. **Get approval** from maintainers
+
+Structure for a new koan:
+```
+koans/XX_topic_name/
+ __init__.py
+ THEORY.md         # Detailed theory
+ HINTS.md          # Progressive hints (5 levels)
+ topic_name.py     # Code to implement
+ test_topic_name.py  # Comprehensive tests
 ```
 
-**Formato de commits:**
-- `feat:` nueva funcionalidad
-- `fix:` corrección de bug
-- `docs:` cambios en documentación
-- `test:` agregar o modificar tests
-- `refactor:` refactorización de código
+### Improving Existing Koans
 
-### 7. Push y Pull Request
+When improving koans:
 
-```bash
-git push origin feature/nueva-funcionalidad
+- **Keep backward compatibility** with tests
+- **Update all related files** (THEORY.md, HINTS.md)
+- **Test thoroughly**
+- **Update documentation**
+
+### Writing Tests
+
+Tests should be:
+
+- **Clear**: Test one thing at a time
+- **Descriptive**: Use meaningful test names
+- **Comprehensive**: Cover edge cases
+- **Independent**: Don'\''t depend on other tests
+
+**Example**:
+```python
+def test_tokenize_words_handles_empty_string(self):
+    """Test tokenization with empty string."""
+    result = tokenize_words_nltk("")
+    assert result == []
+
+def test_tokenize_words_with_punctuation(self):
+    """Test tokenization preserves punctuation."""
+    result = tokenize_words_nltk("Hello, world!")
+    assert "," in result
+    assert "!" in result
 ```
 
-Luego crea un Pull Request en GitHub.
+### Documentation
 
-## 📝 Guías de Estilo
+Good documentation:
 
-### Python
+- **Uses clear language**
+- **Includes examples**
+- **Explains why, not just how**
+- **Has proper formatting**
 
-- Sigue PEP 8
-- Usa type hints
-- Documenta funciones con docstrings
-- Máximo 100 caracteres por línea
+## Style Guide
 
-**Ejemplo:**
+### Python Code
+
+Follow PEP 8 and these guidelines:
 
 ```python
+# Good: Clear function names, docstrings, type hints
 def tokenize_words_nltk(text: str) -> List[str]:
     """
-    Tokeniza un texto en palabras usando NLTK.
+    Tokenize text into words using NLTK.
     
     Args:
-        text: Texto a tokenizar
+        text: Input text to tokenize
         
     Returns:
-        Lista de tokens
+        List of word tokens
+        
+    Example:
+        >>> tokenize_words_nltk("Hello world")
+        ['\''Hello'\'', '\''world'\'']
     """
     from nltk.tokenize import word_tokenize
     return word_tokenize(text)
 ```
 
-### Tests
+### Markdown
 
-- Nombres descriptivos
-- Un concepto por test
-- Usa clases para agrupar tests relacionados
-- Incluye docstrings explicando qué se prueba
+- Use **clear headings**
+- Include **code examples**
+- Use **lists** for readability
+- Add **links** where relevant
 
-**Ejemplo:**
-
-```python
-class TestTokenization:
-    """Tests de tokenización básica"""
-    
-    def test_tokenize_spanish_text(self):
-        """Test: Tokenizar texto en español"""
-        result = tokenize_words_nltk("Hola mundo")
-        assert "Hola" in result
-        assert "mundo" in result
-```
-
-## 🎓 Agregar Nuevos Koans
-
-Si quieres agregar un nuevo koan:
-
-### Estructura
-
-```
-koans/
-  XX_nombre_koan/
-    __init__.py
-    nombre_koan.py      # Implementación con TODOs
-    test_nombre_koan.py # Tests completos
-```
-
-### Contenido del Koan
-
-1. **Docstring descriptivo** explicando el concepto
-2. **Funciones con TODOs** para que los estudiantes implementen
-3. **Docstrings en funciones** con ejemplos
-4. **Comentarios útiles** como pistas
-5. **Tests completos** que fallen inicialmente
-
-### Ejemplo de Función de Koan
+### Comments
 
 ```python
-def nueva_funcion(text: str) -> List[str]:
-    """
-    Descripción clara de qué hace.
-    
-    Ejemplo:
-        >>> nueva_funcion("ejemplo")
-        ['e', 'j', 'e', 'm', 'p', 'l', 'o']
-    
-    Args:
-        text: Descripción del parámetro
-        
-    Returns:
-        Descripción del retorno
-    """
-    # TODO: Implementa aquí
-    # Pista: puedes usar list(text)
-    return []
+# Good: Explains why
+# Using NLTK tokenizer because it handles contractions better
+
+# Bad: States the obvious
+# Tokenizing the text
 ```
 
-## ✅ Checklist Antes de Enviar PR
+## Commit Guidelines
 
-- [ ] Los tests pasan: `pytest`
-- [ ] El código sigue PEP 8
-- [ ] Agregaste docstrings
-- [ ] Actualizaste README.md si es necesario
-- [ ] Agregaste tests para nuevo código
-- [ ] Probaste manualmente los cambios
-- [ ] El commit tiene mensaje descriptivo
+### Commit Message Format
 
-## 📖 Recursos
+```
+<type>(<scope>): <subject>
 
-- [PEP 8 Style Guide](https://pep8.org/)
-- [pytest Documentation](https://docs.pytest.org/)
-- [spaCy Documentation](https://spacy.io/)
-- [NLTK Documentation](https://www.nltk.org/)
+<body>
 
-## 💬 Comunicación
+<footer>
+```
 
-- Issues de GitHub para bugs y features
-- Pull Requests para contribuciones de código
-- Discussions para preguntas generales
+**Types**:
+- `feat`: New feature
+- `fix`: Bug fix
+- `docs`: Documentation changes
+- `style`: Code style changes (formatting)
+- `refactor`: Code refactoring
+- `test`: Adding tests
+- `chore`: Maintenance tasks
 
-## 📄 Licencia
+**Examples**:
 
-Al contribuir, aceptas que tus contribuciones sean licenciadas bajo la MIT License.
+```bash
+# Good
+feat(koan01): Add multilingual tokenization support
 
----
+Add support for Spanish and French tokenization
+in the first koan. Includes tests and documentation.
 
-**¡Gracias por contribuir al aprendizaje de NLP! 🎉**
+Closes #123
+
+# Good
+fix(koan05): Fix TF-IDF vectorization for empty documents
+
+Handle edge case where document list is empty
+
+# Good
+docs(guide): Improve installation instructions
+
+Add troubleshooting section for Windows users
+```
+
+## Getting Help
+
+- **Questions?** Open a [Discussion](https://github.com/jjmmolina/nlp-koans-en/discussions)
+- **Stuck?** Check [FAQ.md](FAQ.md)
+- **Found a bug?** Open an [Issue](https://github.com/jjmmolina/nlp-koans-en/issues)
+
+## Recognition
+
+Contributors will be:
+
+- Listed in the README
+- Credited in commit history
+- Appreciated by the community! 
+
+## Thank You!
+
+Your contributions make this project better for everyone learning NLP. Every contribution, no matter how small, is valuable.
+
+**Happy Contributing! **
