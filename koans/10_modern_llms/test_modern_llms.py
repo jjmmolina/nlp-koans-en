@@ -1,4 +1,4 @@
-"""
+﻿"""
 Tests para Koan 10: Modern LLMs & APIs
 
 IMPORTANTE: Para ejecutar estos tests necesitas:
@@ -190,7 +190,7 @@ class TestLLMComparison:
             available_models.append("gemini-1.5-flash")
 
         results = compare_llm_outputs(
-            "Di solo la palabra 'test'", models=available_models
+            "Say only the word 'test'", models=available_models
         )
 
         assert isinstance(results, dict)
@@ -298,3 +298,4 @@ def sample_function_definition():
             "required": ["operation", "a", "b"],
         },
     }
+

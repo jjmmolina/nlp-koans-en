@@ -1,4 +1,4 @@
-"""
+﻿"""
 Koan 07: Word Embeddings - Representaciones Vectoriales
 
 Los word embeddings representan words como vectors numéricos,
@@ -21,7 +21,7 @@ from scipy.spatial.distance import cosine
 
 def get_word_vector_spacy(word: str, lang: str = "es") -> np.ndarray:
     """
-    Obtiene el vector de una palabra using spaCy.
+    Gets the vector of a word using spaCy.
 
     Example:
         >>> vector = get_word_vector_spacy("python")
@@ -30,7 +30,7 @@ def get_word_vector_spacy(word: str, lang: str = "es") -> np.ndarray:
 
     Args:
         word: Palabra a vectorizar
-        lang: Idioma
+        lang: Language
 
     Returns:
         Vector numpy
@@ -50,7 +50,7 @@ def get_text_vector_spacy(text: str, lang: str = "es") -> np.ndarray:
 
     Args:
         text: Text a vectorizar
-        lang: Idioma
+        lang: Language
 
     Returns:
         Vector numpy
@@ -75,7 +75,7 @@ def cosine_similarity_words(word1: str, word2: str, lang: str = "es") -> float:
     Args:
         word1: Primera palabra
         word2: Segunda palabra
-        lang: Idioma
+        lang: Language
 
     Returns:
         Similitud (0-1)
@@ -98,7 +98,7 @@ def find_most_similar(
     Args:
         word: Palabra de referencia
         candidates: List of words candidatas
-        lang: Idioma
+        lang: Language
         top_n: Número de resultados
 
     Returns:
@@ -124,7 +124,7 @@ def word_analogy(
         word_b: Palabra B
         word_c: Palabra C
         candidates: Palabras candidatas for the respuesta
-        lang: Idioma
+        lang: Language
 
     Returns:
         Palabra más apropiada
@@ -147,7 +147,7 @@ def get_document_similarity(text1: str, text2: str, lang: str = "es") -> float:
     Args:
         text1: Primer text
         text2: Segundo text
-        lang: Idioma
+        lang: Language
 
     Returns:
         Similitud (0-1)
@@ -171,7 +171,7 @@ def cluster_words_by_similarity(
     Args:
         words: List of words
         threshold: Umbral de similitud mínima
-        lang: Idioma
+        lang: Language
 
     Returns:
         List of clusters (listas de words similares)
@@ -179,3 +179,4 @@ def cluster_words_by_similarity(
     # TODO: Implement clustering simple
     # Agrupa words con similitud por encima del threshold
     pass
+

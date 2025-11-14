@@ -1,7 +1,7 @@
-"""
+﻿"""
 Koan 03: POS Tagging - Etiquetado Gramatical
 
-POS (Part-of-Speech) Tagging identifica la categoría gramatical de cada palabra:
+POS (Part-of-Speech) Tagging identifica the grammatical category of each word:
 sustantivo, verbo, adjetivo, etc.
 
 Ejemplos:
@@ -57,7 +57,7 @@ def pos_tag_spacy(text: str, lang: str = "es") -> List[Tuple[str, str, str]]:
 
     Args:
         text: Text a etiquetar
-        lang: Idioma ('es' o 'en')
+        lang: Language ('es' o 'en')
 
     Returns:
         List of tuplas (palabra, etiqueta_universal, etiqueta_detallada)
@@ -80,7 +80,7 @@ def extract_nouns(text: str, lang: str = "es") -> List[str]:
 
     Args:
         text: Text a analizar
-        lang: Idioma
+        lang: Language
 
     Returns:
         List of sustantivos
@@ -100,7 +100,7 @@ def extract_verbs(text: str, lang: str = "es") -> List[str]:
 
     Args:
         text: Text a analizar
-        lang: Idioma
+        lang: Language
 
     Returns:
         List of verbos
@@ -120,7 +120,7 @@ def extract_adjectives(text: str, lang: str = "es") -> List[str]:
 
     Args:
         text: Text a analizar
-        lang: Idioma
+        lang: Language
 
     Returns:
         List of adjetivos
@@ -139,7 +139,7 @@ def get_pos_statistics(text: str, lang: str = "es") -> Dict[str, int]:
 
     Args:
         text: Text a analizar
-        lang: Idioma
+        lang: Language
 
     Returns:
         Diccionario with withteo de cada POS tag
@@ -162,7 +162,7 @@ def find_noun_phrases(text: str, lang: str = "es") -> List[str]:
 
     Args:
         text: Text a analizar
-        lang: Idioma
+        lang: Language
 
     Returns:
         List of frases nominales
@@ -186,7 +186,7 @@ def pos_pattern_match(
     Args:
         text: Text a analizar
         pattern: List of POS tags a buscar (en orden)
-        lang: Idioma
+        lang: Language
 
     Returns:
         List of secuencias que coinciden with el patrón
@@ -197,3 +197,4 @@ def pos_pattern_match(
     # 2. Recorre el text buscando ventanas del tamaño del patrón
     # 3. Comfor los POS tags de cada ventana with el patrón
     pass
+

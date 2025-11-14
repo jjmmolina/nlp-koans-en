@@ -66,7 +66,7 @@ class TestFillMask:
     """Tests de fill-mask"""
     
     def test_fill_mask(self):
-        """Test: Rellenar palabra enmascarada"""
+        """Test: Fill masked word"""
         text = "Python es un [MASK] de programación"
         result = fill_mask(text)
         
@@ -144,4 +144,5 @@ class TestRealWorldExamples:
         
         result = question_answering(context, question, lang="es")
         assert isinstance(result, dict)
+
 

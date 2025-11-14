@@ -1,4 +1,4 @@
-"""
+﻿"""
 Koan 09: Language Models - Models de Lenguaje Generatestivos
 
 Los models de lenguaje generan text coherente basándose en patrones aprendidos.
@@ -204,7 +204,7 @@ def prompt_engineering_template(
 
     Example:
         >>> prompt = prompt_engineering_template(
-        ...     task="Traduce al inglés",
+        ...     task="Translate to English",
         ...     examples=["Hola -> Hello", "Adiós -> Goodbye"]
         ... )
         >>> # Usa este prompt para generación
@@ -248,3 +248,4 @@ def compare_generation_strategies(
     if strategies is None:
         strategies = ["greedy", "sampling"]
     pass
+

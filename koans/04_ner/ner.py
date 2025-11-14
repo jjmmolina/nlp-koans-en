@@ -1,4 +1,4 @@
-"""
+﻿"""
 Koan 04: Named Entity Recognition (NER) - Rewithocimiento de Entidades Nombradas
 
 NER identifica y clasifica entidades en el text:
@@ -26,7 +26,7 @@ def extract_entities_spacy(text: str, lang: str = "es") -> List[Tuple[str, str]]
 
     Args:
         text: Text a analizar
-        lang: Idioma ('es' o 'en')
+        lang: Language ('es' o 'en')
 
     Returns:
         List of tuplas (entidad, tipo)
@@ -50,7 +50,7 @@ def extract_persons(text: str, lang: str = "es") -> List[str]:
 
     Args:
         text: Text a analizar
-        lang: Idioma
+        lang: Language
 
     Returns:
         List of nombres de personas
@@ -70,7 +70,7 @@ def extract_organizations(text: str, lang: str = "es") -> List[str]:
 
     Args:
         text: Text a analizar
-        lang: Idioma
+        lang: Language
 
     Returns:
         List of organizaciones
@@ -89,7 +89,7 @@ def extract_locations(text: str, lang: str = "es") -> List[str]:
 
     Args:
         text: Text a analizar
-        lang: Idioma
+        lang: Language
 
     Returns:
         List of lugares
@@ -109,7 +109,7 @@ def extract_dates(text: str, lang: str = "es") -> List[str]:
 
     Args:
         text: Text a analizar
-        lang: Idioma
+        lang: Language
 
     Returns:
         List of expresiones temporales
@@ -132,7 +132,7 @@ def group_entities_by_type(text: str, lang: str = "es") -> Dict[str, List[str]]:
 
     Args:
         text: Text a analizar
-        lang: Idioma
+        lang: Language
 
     Returns:
         Diccionario with entidades agrupadas por tipo
@@ -152,7 +152,7 @@ def count_entity_types(text: str, lang: str = "es") -> Dict[str, int]:
 
     Args:
         text: Text a analizar
-        lang: Idioma
+        lang: Language
 
     Returns:
         Diccionario with withteo por tipo
@@ -178,7 +178,7 @@ def find_entity_withtext(
         text: Text a analizar
         entity: Entidad a buscar
         window: Número de words de withtext (antes y después)
-        lang: Idioma
+        lang: Language
 
     Returns:
         Context de la entidad
@@ -203,7 +203,7 @@ def visualize_entities(text: str, lang: str = "es") -> str:
 
     Args:
         text: Text a analizar
-        lang: Idioma
+        lang: Language
 
     Returns:
         Text with entidades marcadas
@@ -211,3 +211,4 @@ def visualize_entities(text: str, lang: str = "es") -> str:
     # TODO: Implement visualización simple
     # Hint: Construye un nuevo string insertando marcadores alrededor de las entidades
     pass
+

@@ -1,4 +1,4 @@
-"""
+﻿"""
 Koan 05: Text Classification - Classifiesción de Texts
 
 La clasificación de texts asigna categories a documents.
@@ -53,7 +53,7 @@ def create_bow_features(texts: List[str], max_features: int = 100) -> Tuple:
     """
     Creates características Bag of Words (BoW).
 
-    BoW cuenta la frecuencia de cada palabra.
+    BoW counts the frequency of each word.
 
     Example:
         >>> texts = ["hola mundo", "hola Python"]
@@ -228,3 +228,4 @@ def build_simple_spam_classifier(emails: List[str], labels: List[int]) -> Tuple:
     # TODO: Implement clasificador completo
     # Combina las funciones anteriores para crear un pipeline completo
     pass
+

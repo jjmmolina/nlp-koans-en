@@ -28,7 +28,7 @@ def load_pretrained_pipeline(
     Args:
         task: Tarea (sentiment-analysis, ner, qa, etc.)
         model: Nombre del model (opcional)
-        lang: Idioma
+        lang: Language
 
     Returns:
         Pipeline de Hugging Face
@@ -77,7 +77,7 @@ def question_answering(context: str, question: str, lang: str = "es") -> Dict:
     Args:
         context: Text de context
         question: Pregunta
-        lang: Idioma
+        lang: Language
 
     Returns:
         Dictionary con respuesta y score
@@ -99,7 +99,7 @@ def fill_mask(text: str, lang: str = "es") -> List[Dict]:
 
     Args:
         text: Text con [MASK]
-        lang: Idioma
+        lang: Language
 
     Returns:
         List of predicciones con scores
@@ -126,7 +126,7 @@ def zero_shot_classification(
     Args:
         text: Text a clasificar
         candidate_labels: Etiquetas posibles
-        lang: Idioma
+        lang: Language
 
     Returns:
         Classifiesción con scores
@@ -150,7 +150,7 @@ def summarize_text(
         text: Text a resumir
         max_length: Longitud máxima del resumen
         min_length: Longitud mínima del resumen
-        lang: Idioma
+        lang: Language
 
     Returns:
         Text resumido
@@ -161,7 +161,7 @@ def summarize_text(
 
 def translate_text(text: str, source_lang: str = "es", target_lang: str = "en") -> str:
     """
-    Traduce text entre idiomas.
+    Traduce text entre Languages.
 
     Example:
         >>> translate_text("Hola mundo", source_lang="es", target_lang="en")
@@ -169,14 +169,14 @@ def translate_text(text: str, source_lang: str = "es", target_lang: str = "en") 
 
     Args:
         text: Text a traducir
-        source_lang: Idioma origen
-        target_lang: Idioma destino
+        source_lang: Language origen
+        target_lang: Language destino
 
     Returns:
         Text traducido
     """
     # TODO: Implement traducción
-    # Hint: Busca models de traducción específicos for the par de idiomas
+    # Hint: Busca models de traducción específicos for the par de Languages
     pass
 
 
@@ -206,4 +206,5 @@ def compare_models_performance(
     # TODO: Implement comparación de models
     # Hint: Mide el tiempo de cada model y compara resultados
     pass
+
 

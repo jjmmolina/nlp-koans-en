@@ -1,4 +1,4 @@
-"""
+﻿"""
 Tests para Koan 07: Word Embeddings
 
 Ejecuta con:
@@ -22,7 +22,7 @@ class TestVectorExtraction:
     """Tests de extracción de vectors"""
     
     def test_get_word_vector_spacy(self):
-        """Test: Obtener vector de palabra"""
+        """Test: Get word vector"""
         vector = get_word_vector_spacy("python", lang="es")
         
         assert isinstance(vector, np.ndarray)
@@ -147,3 +147,4 @@ class TestRealWorldExamples:
         
         assert len(similarities) == 3
         assert all(isinstance(s, float) for s in similarities)
+

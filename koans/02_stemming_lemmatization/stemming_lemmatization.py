@@ -60,7 +60,7 @@ def stem_word_snowball(word: str, language: str = "spanish") -> str:
 
     Args:
         word: word a procesar
-        language: Idioma ('spanish', 'english', etc.)
+        language: Language ('spanish', 'english', etc.)
 
     Returns:
         Stem de la word
@@ -80,7 +80,7 @@ def stem_sentence(sentence: str, language: str = "spanish") -> str:
 
     Args:
         sentence: Oración a procesar
-        language: Idioma
+        language: Language
 
     Returns:
         Oración with words stemmed
@@ -127,7 +127,7 @@ def lemmatize_with_spacy(text: str, lang: str = "es") -> List[str]:
 
     Args:
         text: Text a lemmatizar
-        lang: Idioma ('es' o 'en')
+        lang: Language ('es' o 'en')
 
     Returns:
         List of lemas
@@ -154,7 +154,7 @@ def compare_stem_vs_lemma(word: str, language: str = "spanish") -> dict:
 
     Args:
         word: word a analizar
-        language: Idioma
+        language: Language
 
     Returns:
         Diccionario with resultados
@@ -181,7 +181,7 @@ def normalize_text(text: str, method: str = "lemma", language: str = "spanish") 
     Args:
         text: Text a normalizar
         method: 'stem' o 'lemma'
-        language: Idioma
+        language: Language
 
     Returns:
         Text normalizado
@@ -190,5 +190,6 @@ def normalize_text(text: str, method: str = "lemma", language: str = "spanish") 
     # Hint: Usa if/else for elegir entre stemming y lemmatization
     # Cada método requiere un procesamiento diferente del text
     pass
+
 
 

@@ -25,7 +25,7 @@ def analyze_sentiment_simple(text: str, lang: str = "es") -> Dict:
 
     Args:
         text: Text a analizar
-        lang: Idioma ('es' o 'en')
+        lang: Language ('es' o 'en')
 
     Returns:
         Dictionary with thebel y score
@@ -47,7 +47,7 @@ def analyze_sentiment_batch(texts: List[str], lang: str = "es") -> List[Dict]:
 
     Args:
         texts: List of texts
-        lang: Idioma
+        lang: Language
 
     Returns:
         List of resultados
@@ -67,7 +67,7 @@ def get_sentiment_label(text: str, lang: str = "es") -> str:
 
     Args:
         text: Text a analizar
-        lang: Idioma
+        lang: Language
 
     Returns:
         Etiqueta de sentimiento
@@ -86,7 +86,7 @@ def get_sentiment_score(text: str, lang: str = "es") -> float:
 
     Args:
         text: Text a analizar
-        lang: Idioma
+        lang: Language
 
     Returns:
         Score de confianza (0-1)
@@ -159,4 +159,5 @@ def sentiment_statistics(texts: List[str]) -> Dict:
     # TODO: Calculates estadísticas agregadas
     # Analyzes todos los texts y cuenta por categoría
     pass
+
 

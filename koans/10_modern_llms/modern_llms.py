@@ -1,4 +1,4 @@
-"""
+﻿"""
 Koan 10: Modern LLMs & APIs - Usando Models de Lenguaje Avanzados
 
 Este koan explora los LLMs más modernos y sus APIs:
@@ -81,11 +81,11 @@ def call_openai_streaming(
         model: Model a usar
 
     Yields:
-        Fragmentos de text conforme se generan
+        text fragments conforme se generan
 
     Note:
         Esta función es un generador. Debes iterar sobre ella para obtener
-        los fragmentos de text. Cada fragmento puede ser una palabra, parte
+        los text fragments. Cada fragmento can be a word, part
         de una palabra, o varios caracteres.
     """
     # TODO: Implement streaming de OpenAI
@@ -324,3 +324,4 @@ def safe_llm_call(
     # TODO: Implement llamada con reintentos
     # Hint: Usa backoff exponencial con time.sleep(2 ** attempt)
     pass
+
