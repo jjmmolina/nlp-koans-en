@@ -262,3 +262,26 @@ Project inspired by:
 ---
 
 **Enjoy learning NLP! **
+
+##  Translation Status
+
+###  Fully Translated (English)
+- **README.md** - Project overview and quick start
+- **GUIDE.md** - Complete step-by-step guide
+- **FAQ.md** - Frequently asked questions
+- **LEARNING_PATH.md** - Detailed learning roadmap
+- **CONTRIBUTING.md** - Contribution guidelines
+- **PROJECT_SUMMARY.md** - Technical project summary
+- **All Python code** - Comments, docstrings, and instructions (24 files)
+
+###  Pending Translation (Currently in Spanish)
+- **THEORY.md files** (13 files) - Theoretical explanations for each koan
+- **HINTS.md files** (13 files) - Progressive hints for exercises
+
+>  **Note**: THEORY and HINTS files have a translation note at the top. You can:
+> - Use an online translator (Google Translate, DeepL)
+> - Refer to code examples (language-agnostic)
+> - **Help translate!** See [CONTRIBUTING.md](CONTRIBUTING.md) to contribute translations
+
+The repository is **fully functional** - all code and main documentation is in English!
+
