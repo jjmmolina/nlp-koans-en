@@ -1,4 +1,4 @@
-"""
+﻿"""
 Koan 01: Tokenizesción - Dividiendo el Text en Unidades
 
 La tokenización es el proceso de dividir text en unidades más pequeñas (tokens),
@@ -30,7 +30,7 @@ def tokenize_words_nltk(text: str) -> List[str]:
         ['Hola', ',', '¿', 'cómo', 'estás', '?']
 
     Args:
-        text: Text a tokenizar
+        text: Text to tokenize
 
     Returns:
         List of tokens (words y signos de puntuación)
@@ -51,7 +51,7 @@ def tokenize_sentences_nltk(text: str) -> List[str]:
         ['Hola mundo.', '¿Cómo estás?', 'Yo estoy bien.']
 
     Args:
-        text: Text a tokenizar
+        text: Text to tokenize
 
     Returns:
         List of sentences
@@ -72,8 +72,8 @@ def tokenize_words_spacy(text: str, lang: str = "es") -> List[str]:
         ['Dr.', 'Smith', 'ganó', '$', '1,000', 'dólares', '.']
 
     Args:
-        text: Text a tokenizar
-        lang: Idioma ('es' for español, 'en' for inglés)
+        text: Text to tokenize
+        lang: Language ('es' for español, 'en' for inglés)
 
     Returns:
         List of tokens
@@ -99,7 +99,7 @@ def custom_tokenize(text: str, delimiter: str = " ") -> List[str]:
         ['Hola', 'mundo', 'Python']
 
     Args:
-        text: Text a tokenizar
+        text: Text to tokenize
         delimiter: Delimitador for seforr tokens
 
     Returns:
@@ -151,3 +151,4 @@ def remove_punctuation_tokens(tokens: List[str]) -> List[str]:
     # 1. El módulo string tiene una withstante with todos los signos de puntuación
     # 2. Usa una list comprehension for filtrar
     pass
+

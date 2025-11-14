@@ -1,4 +1,4 @@
-"""
+﻿"""
 Koan 06: Sentiment Analysis - Análisis de Sentimientos
 
 El análisis de sentimientos determina si un text es positivo, negativo o neutral.
@@ -110,7 +110,7 @@ def classify_sentiment_simple(text: str) -> str:
         'positivo', 'negativo', o 'neutral'
     """
     # TODO: Implement clasificación simple
-    # Mapea los resultados a categories en español
+    # Mapea los resultados a categories in Spanish
     pass
 
 
@@ -159,3 +159,4 @@ def sentiment_statistics(texts: List[str]) -> Dict:
     # TODO: Calculates estadísticas agregadas
     # Analyzes todos los texts y cuenta por categoría
     pass
+

@@ -1,5 +1,5 @@
-"""
-Koan 02: Stemming y Lemmatization - Normalizesción de Palabras
+﻿"""
+Koan 02: Stemming y Lemmatization - Normalizesción de words
 
 Stemming y Lemmatization son técnicas for reducir words a su forma base.
 
@@ -35,10 +35,10 @@ def stem_word_porter(word: str) -> str:
         'fli'
 
     Args:
-        word: Palabra a procesar
+        word: word a procesar
 
     Returns:
-        Stem de la palabra
+        Stem de la word
     """
     # TODO: Implement with PorterStemmer de NLTK
     # Hint: Necesitas importar la clase y crear una instancia
@@ -59,11 +59,11 @@ def stem_word_snowball(word: str, language: str = "spanish") -> str:
         'run'
 
     Args:
-        word: Palabra a procesar
+        word: word a procesar
         language: Idioma ('spanish', 'english', etc.)
 
     Returns:
-        Stem de la palabra
+        Stem de la word
     """
     # TODO: Implement with SnowballStemmer de NLTK
     # Hint: Este stemmer acepta un parámetro de language al crearse
@@ -88,14 +88,14 @@ def stem_sentence(sentence: str, language: str = "spanish") -> str:
     # TODO: Implement stemming de oración
     # Pistas:
     # 1. Divide la oración en words (tokenización simple)
-    # 2. Aplica stemming a cada palabra (usa una función que ya creaste)
+    # 2. Aplica stemming a cada word (usa una función que ya creaste)
     # 3. Une las words procesadas
     pass
 
 
 def lemmatize_word_nltk(word: str, pos: str = "n") -> str:
     """
-    Lemmatiza una palabra using NLTK WordNet.
+    Lemmatiza una word using NLTK WordNet.
 
     Ejemplo:
         >>> lemmatize_word_nltk("running", pos="v")
@@ -104,11 +104,11 @@ def lemmatize_word_nltk(word: str, pos: str = "n") -> str:
         'good'
 
     Args:
-        word: Palabra a lemmatizar
+        word: word a lemmatizar
         pos: Part-of-speech tag ('n'=noun, 'v'=verb, 'a'=adjective, 'r'=adverb)
 
     Returns:
-        Lema de la palabra
+        Lema de la word
     """
     # TODO: Implement with WordNetLemmatizer
     # Hint: Crea una instancia del lemmatizer y usa su método lemmatize()
@@ -153,7 +153,7 @@ def compare_stem_vs_lemma(word: str, language: str = "spanish") -> dict:
         }
 
     Args:
-        word: Palabra a analizar
+        word: word a analizar
         language: Idioma
 
     Returns:
@@ -190,3 +190,4 @@ def normalize_text(text: str, method: str = "lemma", language: str = "spanish") 
     # Hint: Usa if/else for elegir entre stemming y lemmatization
     # Cada método requiere un procesamiento diferente del text
     pass
+
